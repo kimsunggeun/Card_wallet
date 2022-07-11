@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="common2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.min.js"></script>
+    <script src="./scrollTrigger.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>카드지갑_거래내역확인</title>
+</head>
+
+<body>
+   
+
+
+
+    <section class="mob">
+        <header>
+
+            <div class="logo">
+                <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                </a>
+            </div>
+              
+            <div class="logoutbox">
+              <a href="Card_wallet_Intro.html">
+                  <p class="logout">로그아웃</p>
+              </a>
+          </div>
+          
+        
+        </header>
+  
+          
+        <div class="contentsbox  visible" style="transform: none;">
+   
+         
+            <div class="titlebox">
+                <p class="titlep">blockchain <span style="font-weight: 200; font-style: normal;">card</span></p>
+            </div>
+            <div class="count" style="margin-top: 40px;">
+              <p  id="doxxx"class="id" style="color: #a3a3a3;">
+                   </p>
+          </div>
+
+        
+          <div class="transaction" id="transaction_box">
+      
+  
+                
+          </div>
+          
+          
+          </div>
+       
+          <div class="next">
+            <a href="Card_wallettransactionhistory.html">
+              <p class="next_p ">1</p>
+              </a>
+              <a href="Card_wallettransactionhistory(2).html">
+              <p class="next_p nfocus">2</p>
+            </a>
+            <a href="Card_wallettransactionhistory(3).html">
+            <p class="next_p ">3</p>
+            </a>
+           </div>
+          <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+            <div class="btn9 back">
+                <p style="font-style: normal;" class="btnp"> 돌아가기</p>
+            </div>
+        </a>
+       
+    </section>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Address 값  가져오는코드 -->
+
+ <script>
+  function get_pric3e() {
+    var el = document.getElementById('doxxx')
+    fetch("http://10.159.29.84:8080/Wallet_search")
+
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        var pri3ce = res.Address
+        el.innerHTML = "Your Address : "+ pri3ce
+      }).catch(err => {
+        el.innerHTML = "$0.00 - Error";
+      });
+  }
+
+  get_pric3e()
+
+</script>
+
+<!-- 거래내역  가져오는코드 -->
+
+<script>
+  function get_pric4e() {
+    
+    fetch("http://10.159.29.84:8080/transaction_Search")
+
+      .then(res => res.json())
+      .then(res => {
+
+    
+      
+
+        console.log(res)
+
+
+        for(var i = 0; i < res.length; i++){
+
+          const time = document. createElement("p") 
+
+          const price =document.createElement("p")
+
+          const Hash = document.createElement("p")
+          const IN_OUT =document.createElement("p")
+
+          const input = document.getElementById("transaction_box")
+  
+          const userInfo = document.createElement("div")
+
+          const hidebox = document.createElement("div")
+          
+          const bobox = document.createElement("div")
+
+          const hr = document.createElement("hr")
+        const hr1 = document.createElement("hr")
+         const hr2 = document.createElement("hr")
+        const hr3 = document.createElement("hr")
+        const hr4 = document.createElement("hr")
+        const hr5 = document.createElement("hr")
+        const hr6 = document.createElement("hr")
+        const hr7 = document.createElement("hr")
+        const hr8 = document.createElement("hr")
+        const hr9 = document.createElement("hr")
+        const hr10 = document.createElement("hr")
+        const hr11 = document.createElement("hr")
+        const hr12 = document.createElement("hr")//1
+
+        
+        const From_In =document.createElement("p")
+        const hashbo1 =document.createElement("p")
+        const Status =document.createElement("p")
+        const Received_Time = document.createElement("p")
+        const Size =document.createElement("p")
+        const Weight =document.createElement("p")
+        const Included_in_Block =document.createElement("p")
+        const Confirmations =document.createElement("p")
+        const Total_Input =document.createElement("p")
+        const Fees =document.createElement("p")
+        const Fee_per_byte =document.createElement("p")
+        const Fee_per_vbyt =document.createElement("p")
+        const Fee_per_weight_unit =document.createElement("p")//
+
+
+         const From_In_content =document.createElement("p")
+        const hashbo1_content =document.createElement("p")
+        const Status_content =document.createElement("p")
+        const Received_Time_content = document.createElement("p")
+        const Size_content =document.createElement("p")
+        const Weight_content =document.createElement("p")
+        const Included_in_Block_content =document.createElement("p")
+        const Confirmations_content =document.createElement("p")
+        const Total_Input_content =document.createElement("p")
+        const Fees_content =document.createElement("p")
+        const Fee_per_byte_content =document.createElement("p")
+        const Fee_per_vbyt_content =document.createElement("p")
+        const Fee_per_weight_unit_content =document.createElement("p")//
+       
+
+
+        
+
+        time.textContent = res[i].Received_Time
+
+        price.textContent = res[i].IN_OUT_Amount.fee_out
+
+        IN_OUT.textContent = res[i].IN_OUT
+
+        Hash.textContent = res[i].from
+ 
+        From_In.textContent = res[i].State
+        hashbo1.textContent="Hash"
+        Status.textContent ="Status"
+        Received_Time.textContent="Received_Time"
+        Size.textContent="Size"
+        Weight.textContent="Weight"
+        Included_in_Block.textContent="Included_in_Block"
+        Confirmations.textContent="Confirmations"
+        Total_Input.textContent="Total_Input"
+        Fees.textContent="Fees"
+        Fee_per_byte.textContent="Fee_per_byte"
+        Fee_per_vbyt.textContent="Fee_per_vbyt"
+        Fee_per_weight_unit.textContent="Fee_per_weight_unit" //
+
+
+        From_In_content.textContent = res[i].from
+        hashbo1_content.textContent = res[i].Hash
+        Status_content.textContent =res[i].Status
+        Received_Time_content.textContent = res[i].Received_Time
+        Size_content.textContent =res[i].Size
+        Weight_content.textContent =res[i].Weight
+        Included_in_Block_content.textContent = res[i].Included_in_Block
+        Confirmations_content.textContent = res[i].Confirmations
+        Total_Input_content.textContent =res[i].Total_Input
+        Fees_content.textContent =res[i].fee
+        Fee_per_byte_content.textContent=res[i].Fee_per_byte
+        Fee_per_vbyt_content.textContent=res[i].Fee_per_vbyte
+        Fee_per_weight_unit_content.textContent =res[i].Fee_per_weight_unit
+
+
+
+
+
+
+        From_In_content.classList.add("bo3")
+        hashbo1_content.classList.add("bo3")
+        Status_content.classList.add("bo3")
+        Received_Time_content.classList.add("bo3")
+        Size_content.classList.add("bo3")
+        Weight_content.classList.add("bo3")
+        Included_in_Block_content.classList.add("bo3")
+        Confirmations_content.classList.add("bo3")
+        Total_Input_content.classList.add("bo3")
+        Fees_content.classList.add("bo3")
+        Fee_per_byte_content.classList.add("bo3")
+        Fee_per_vbyt_content.classList.add("bo3")
+        Fee_per_weight_unit_content.classList.add("bo3")
+
+
+
+          bobox.classList.add("menu2")
+
+          hidebox.classList.add("testpbox")
+
+          userInfo.classList.add("transaction_box")
+
+          Hash.classList.add("hash");
+
+          price.classList.add("price");
+          IN_OUT.classList.add("bo");
+          time.classList.add("date");
+          //
+          
+          
+        From_In.classList.add("bo2");
+        hashbo1.classList.add("bo2");
+        Status.classList.add("bo2");
+        Received_Time.classList.add("bo2");
+        Size.classList.add("bo2");
+        Weight.classList.add("bo2");
+        Included_in_Block.classList.add("bo2");
+        Confirmations.classList.add("bo2");
+        Total_Input.classList.add("bo2");
+        Fees.classList.add("bo2");
+        Fee_per_byte.classList.add("bo2");
+        Fee_per_vbyt.classList.add("bo2");
+        Fee_per_weight_unit.classList.add("bo2");//
+
+
+
+          $("#demo").append(time);
+          $("#demo").append(price);
+          $("#demo").append(Hash);
+
+
+         input.appendChild(userInfo);
+  
+        userInfo.appendChild(hidebox);
+        hidebox.appendChild(time);
+        hidebox.appendChild(price);
+        hidebox.appendChild(IN_OUT);
+        hidebox.appendChild(Hash);
+     
+        userInfo.appendChild(bobox);
+        bobox.appendChild(From_In);
+        bobox.appendChild(From_In_content);
+        bobox.appendChild(hr);
+        bobox.appendChild(hashbo1);
+        bobox.appendChild(hashbo1_content);
+        bobox.appendChild(hr1);
+        bobox.appendChild(Status);
+        bobox.appendChild(Status_content);
+        bobox.appendChild(hr2);
+        bobox.appendChild(Received_Time);
+        bobox.appendChild(Received_Time_content);
+        bobox.appendChild(hr3);
+        bobox.appendChild(Size);
+        bobox.appendChild(Size_content);
+        bobox.appendChild(hr4);
+        bobox.appendChild(Included_in_Block);
+        bobox.appendChild(Included_in_Block_content);
+        bobox.appendChild(hr5);
+        bobox.appendChild(Confirmations);
+        bobox.appendChild(Confirmations_content);
+        bobox.appendChild(hr6);
+        bobox.appendChild(Total_Input);
+        bobox.appendChild(Total_Input_content);      
+        bobox.appendChild(hr7);
+        bobox.appendChild(Fees);
+        bobox.appendChild(Fees_content);
+        bobox.appendChild(hr8);
+        bobox.appendChild(Fee_per_byte);
+        bobox.appendChild(Fee_per_byte_content);
+        bobox.appendChild(hr9);
+        bobox.appendChild(Fee_per_vbyt);
+        bobox.appendChild(Fee_per_vbyt_content);
+        bobox.appendChild(hr10);
+        bobox.appendChild(Fee_per_weight_unit);
+        bobox.appendChild(Fee_per_weight_unit_content);
+        bobox.appendChild(hr11);
+
+        }
+
+
+        $('.transaction_box').click(function(){
+       
+       $('.testpbox').addClass('menu1cle')
+             $('.menu2').slideUp();
+             if ($(this).children('.menu2').is(':hidden')){
+                $(this).children('.menu2').slideDown();
+             } else{
+                $('.testpbox').removeClass('menu1cle')
+                $(this).children('.menu2').slideUp();
+             }
+ 
+
+  
+      })
+      
+      .catch(err => {
+        el.innerHTML = "$0.00 - Error";
+      });
+  })
+  }
+  
+  get_pric4e()
+
+</script>
+
+
+    
+
+
+</html>

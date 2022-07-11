@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="common2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.min.js"></script>
+    <script src="./scrollTrigger.js"></script>
+
+<!-- qr코드 -->
+    <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+    <script src="./jsQR.js"></script>
+
+<!-- qr코드종료 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>이체하기</title>
+</head>
+
+<body>
+   
+
+    <section class="mob">
+        <header style="z-index: 0;">
+            <div class="logo">
+                <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                </a>
+            </div>
+            <div class="logoutbox">
+              <a href="Card_wallet_Intro.html">
+                  <p class="logout">로그아웃</p>
+              </a>
+          </div>
+        </header>
+
+
+        <div class="contentsbox visible">
+
+
+
+
+    
+            
+  
+
+                <div class="titlebox ">
+                    <p class="titlep" style="font-style: normal;">Confirm </p>
+                </div>
+                <div class="transfercontentsbox confirm5" >
+                    <span id="doxxsx" class="confirm2"></span><br>
+    <span class="confirm" id="doxsx"></span><br>
+     <span style="font-weight: bold;">Address</span>로 <span id="doxsxxx" style="font-weight: bold; "></span><br> 를보냅니다
+                    <br>
+                    <span id="doxsxxxx" style="font-size: 12px; color: #A3a3a3;"> </span><br>
+                    <span id="doxsxxxxxx" style="font-size: 12px; color: #A3a3a3;"> </span><Br>
+                     <span id="doxsxxxxx" style="font-size: 12px; color: #A3a3a3;"> </span><br>
+                     <span id="doxsxxxxxxx" style="font-size: 12px; color: #A3a3a3;"> </span><br>
+                     <span id="doxsxxxxxxxxx" style="font-size: 12px; color: #A3a3a3;"> </span><br>
+                     <span id="doxsxxxxxxxxxx" style="font-size: 12px; color: #A3a3a3;"> </span><br>
+                     <span id="doxsxxxxxxxx" style="font-size: 12px; color: #EF4234;;"> </span><br>
+
+
+                    <p  id="btc3" style="display: inline-block; margin-top: 10px; font-size: 24px;" > </p>
+              
+                    <div class="money">
+                        <p class="moneyp" id='rido2' style="cursor: auto;"></p>
+                    </div>
+            </div>
+                <div class="Warningbox">
+                    <p class="Warningp">트랜잭션 생성을 하는경우<br>
+                        Private key 를 입력하여 주세요<br>
+                        <Br>
+                        <span style="font-size: 18px;">* 주의 * 이작업은 되돌릴 수 없습니다.</span>
+                    </p>
+                    <p class="contentp" style="margin-top:20px;">
+                        Private key
+                      
+                    </p>
+
+                    <form action="http://10.159.29.84:8080/rawtransaction_Signature" method="post">
+
+                    <input class="inputqr2" id="qr" name="PrivateKey" placeholder="PrivateKey입력하세요." style="border-radius: 6px;">
+                    <label class="qrlabel">
+                        <img src="./img/qr.png"  id="modal-open" class="Pa">
+                        
+                        <input class="qrcode" >
+                    </label>
+                    
+                   
+                        
+                            <input class="btn2 close"  type="submit"  style=" appearance: none; -moz-appearance: none; -webkit-appearance: none; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px; color: #fff; font-size: 27px; font-weight: bold;" value="확인하기" >
+                       
+                   
+                    <a href="Card_wallet_transfer.html">
+                    <div class="btn2 close2" style="background:#fff;">
+                        <p class="btnp closep2">취소</p>
+                    </div>
+                </a>
+                </div>
+            </form>
+         
+            </div> 
+          
+
+
+
+
+       
+ <!-- 모달시작 -->
+ <div id="modal-container" class="modal unstaged">
+  <div class="modal-overlay">
+
+  </div>
+  <div class="modal-contents">
+    <div class="loadingMessage" id="loadingMessage">QR코드 인식을위해 카메라 허용을 해주세요.</div>
+
+    <canvas id="canvas" hidden></canvas>
+    <div id="output" hidden>
+      <div class="outputMessage" id="outputMessage"></div>
+      
+      <div hidden><b>Data:</b> <span id="outputData"></span></div>
+      </div>
+      <div id="qr-reader" class="qr-reader"  style=" margin: 0 auto;">  </div>
+      <input class="inputqr27"    id="qr2" style="border-radius: 6px; width: 320px;"  ><br>
+          <div id="modal-close" class="btn2 close2" style="background:#fff;">
+              <p class="btnp closep2">완료</p>
+          </div>
+      </div>
+
+
+  </div>
+  <!-- 모달끝 -->
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+<!-- 모달 코드 -->
+
+<script>
+
+  document.getElementById('modal-open').addEventListener("click", function (e) {
+      $('body').css("overflow", "hidden");
+      document.getElementById('modal-container').classList.toggle('opaque');
+      document.getElementById('modal-container').classList.toggle('unstaged');
+  });
+
+
+  document.getElementById('modal-close').addEventListener("click", function (e) {
+      document.getElementById('modal-container').classList.toggle('opaque');
+
+      document.getElementById('modal-container').addEventListener('transitionend', function (e) {
+          this.classList.toggle('unstaged');
+          this.removeEventListener('transitionend', arguments.callee);
+          $('body').css("overflow", "scroll");
+
+      });
+
+  });
+
+  </script>
+
+<!-- 모달 코드끝 -->
+
+
+
+
+<!-- Transmission_availability 값 받아오는코드 -->
+<script>
+  function Transmission_availability() {
+    var el = document.getElementById('doxsxxxxxxxx')
+    fetch("http://10.159.29.84:8080/Transaction_Doublecheck")
+
+      .then(res => res.json())
+      .then(res => {
+
+        var Transmission_availability = res.Transmission_availability
+        el.innerHTML = Transmission_availability
+      }).catch(err => {
+        el.innerHTML = "$0.00 - Error";
+      });
+  }
+
+  Transmission_availability()
+
+
+</script>
+
+
+
+<!-- Transmission_availability 값 받아오는코드끝 -->
+
+
+
+<!--Address 값 받아오는코드  -->
+<script>
+    function get_pric3e() {
+      var el = document.getElementById('doxxx')
+      fetch("http://10.159.29.84:8080/Wallet_search")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var pri3ce = res.Address
+          el.innerHTML = "Your Address : "+ pri3ce
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    get_pric3e()
+
+  </script>
+
+<!--Address 값 받아오는코드끝  -->
+
+
+<!--Send_address 값 받아오는코드  -->
+<script>
+    function Send_address() {
+      var el = document.getElementById('doxxsx')
+      fetch("http://10.159.29.84:8080/Transaction_Doublecheck")
+
+        .then(res => res.json())
+        .then(res => {
+  
+          var Send_address = res.Send_address
+          el.innerHTML = Send_address + "에서 출금"
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Send_address()
+
+  </script>
+<!--Send_address 값 받아오는코드끝 -->
+
+<!--Recipient_address 값 받아오는코드  -->
+<script>
+    function Recipient_address() {
+      var el = document.getElementById('doxsx')
+      fetch("http://10.159.29.84:8080/Transaction_Doublecheck")
+
+        .then(res => res.json())
+        .then(res => {
+      
+          var Recipient_address = res.Recipient_address
+          el.innerHTML = Recipient_address 
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Recipient_address()
+
+  </script>
+
+<!--Recipient_address 값 받아오는코드끝  -->
+
+
+<!--Recipient_Amount 값 받아오는코드  -->
+<script>
+    function Recipient_Amount() {
+      var el = document.getElementById('doxsxxx')
+      fetch("http://10.159.29.84:8080/Transaction_Doublecheck")
+
+        .then(res => res.json())
+        .then(res => {
+      
+          var Recipient_Amount = res.Recipient_Amount
+          el.innerHTML = Recipient_Amount 
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Recipient_Amount()
+
+  </script>
+<!--Recipient_Amount 값 받아오는코드끝  -->
+
+
+<!--fee 값 받아오는코드  -->
+<script>
+    function fee() {
+      var el = document.getElementById('doxsxxxx')
+      fetch("http://10.159.29.84:8080/Transaction_Doublecheck")
+
+        .then(res => res.json())
+        .then(res => {
+      
+          var fee = res.fee
+          el.innerHTML = "수수료"+"("+fee+")" 
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    fee()
+
+  </script>
+
+<!--fee 값 받아오는코드끝  -->
+
+
+<!--Recipient_Amount_Plus_fee 값 받아오는코드  -->
+<script>
+    function Recipient_Amount_Plus_fee() {
+      var el = document.getElementById('doxsxxxxxx')
+      fetch("http://10.159.29.84:8080/Transaction_Doublecheck")
+
+        .then(res => res.json())
+        .then(res => {
+   
+          var Recipient_Amount_Plus_fee = res.Recipient_Amount_Plus_fee
+          el.innerHTML = "총출금 금액 : "+Recipient_Amount_Plus_fee 
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Recipient_Amount_Plus_fee()
+
+  </script>
+
+<!--Recipient_Amount_Plus_fee 값 받아오는코드끝  -->
+
+
+
+<!--Current_Amount 값 받아오는코드  -->
+<script>
+    function Current_Amount() {
+      var el = document.getElementById('doxsxxxxx')
+      fetch("http://10.159.29.84:8080/Transaction_Doublecheck")
+
+        .then(res => res.json())
+        .then(res => {
+ 
+          var Current_Amount = res.Current_Amount
+          el.innerHTML = "보내기전 금액 : "+Current_Amount 
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Current_Amount()
+
+  </script>
+
+
+
+<!--Current_Amount 값 받아오는코드끝  -->
+
+
+
+
+<!--Amount_after_transmission 값 받아오는코드  -->
+<script>
+    function Amount_after_transmission() {
+      var el = document.getElementById('doxsxxxxxxx')
+      fetch("http://10.159.29.84:8080/Transaction_Doublecheck")
+
+        .then(res => res.json())
+        .then(res => {
+      
+          var Amount_after_transmission = res.Amount_after_transmission
+          el.innerHTML = "보내고난후 금액 : " + Amount_after_transmission
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Amount_after_transmission()
+
+  </script>
+
+<!--Amount_after_transmission 값 받아오는코드끝  -->
+
+
+<!--opre 값 받아오는코드  -->
+<script>
+  function op_return() {
+    var el = document.getElementById('doxsxxxxxxxxxx')
+    fetch("http://10.159.29.84:8080/Transaction_Doublecheck")
+
+      .then(res => res.json())
+      .then(res => {
+
+        var op_return = res.op_return
+        el.innerHTML = "op_return : " + op_return
+      }).catch(err => {
+        el.innerHTML = "$0.00 - Error";
+      });
+  }
+
+  op_return()
+
+</script>
+
+<!--Amount_after_transmission 값 받아오는코드끝  -->
+
+
+<!--Fee_setting 값 받아오는코드  -->
+<script>
+  function Fee_setting() {
+    var el = document.getElementById('doxsxxxxxxxxx')
+    fetch("http://10.159.29.84:8080/Transaction_Doublecheck")
+
+      .then(res => res.json())
+      .then(res => {
+    
+        var Fee_setting = res.Fee_setting
+        el.innerHTML =  Fee_setting
+      }).catch(err => {
+        el.innerHTML = "dpr";
+      });
+  }
+
+  Fee_setting()
+
+</script>
+
+<!--Amount_after_transmission 값 받아오는코드끝  -->
+
+
+<!-- qr코드 시작 -->
+  <script>
+
+    
+        function onScanSuccess(decodedText, ) {
+           
+           $('#qr').val(decodedText);
+           $('#qr2').val(decodedText)
+          
+       
+       }
+       
+       
+       
+       
+       
+       var html5QrcodeScanner = new Html5QrcodeScanner(
+       
+       
+       
+       
+       
+           'qr-reader', { fps: 10, qrbox: 250 });
+       
+       
+           
+       html5QrcodeScanner.render(onScanSuccess);
+           
+       document.getElementById('qr-reader__status_span').style.display="none"
+       document.getElementById('qr-reader__scan_region').style.display="none"
+       document.getElementById('qr-reader__dashboard_section_csr').style.display="none"
+       document.getElementById('qr-reader__dashboard_section_swaplink').innerText = "QR코드 스캔하로가기"
+
+ 
+</script> 
+
+
+
+<script>
+  var video = document.createElement("video");
+  var canvasElement = document.getElementById("canvas");
+  var canvas = canvasElement.getContext("2d");
+  var loadingMessage = document.getElementById("loadingMessage");
+  var outputContainer = document.getElementById("output");
+  var outputMessage = document.getElementById("outputMessage");
+  var outputData1 = document.getElementById("qr");
+ 
+
+  function drawLine(begin, end, color) {
+    canvas.beginPath();
+    canvas.moveTo(begin.x, begin.y);
+    canvas.lineTo(end.x, end.y);
+    canvas.lineWidth = 4;
+    canvas.strokeStyle = color;
+    canvas.stroke();
+  }
+
+  // Use facingMode: environment to attemt to get the front camera on phones
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream) {
+    video.srcObject = stream;
+    video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+    video.play();
+    requestAnimationFrame(tick);
+  });
+
+  function tick() {
+    loadingMessage.innerText = "⌛ Loading video..."
+    if (video.readyState === video.HAVE_ENOUGH_DATA) {
+      loadingMessage.hidden = true;
+      canvasElement.hidden = false;
+      outputContainer.hidden = false;
+
+      canvasElement.height = video.videoHeight;
+      canvasElement.width = video.videoWidth;
+      canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+      var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
+      var code = jsQR(imageData.data, imageData.width, imageData.height, {
+        inversionAttempts: "dontInvert",
+      });
+      if (code) {
+        drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
+        drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
+        drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
+        drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
+        outputMessage.hidden = true;
+        outputData.parentElement.hidden = false;
+        outputData.innerText = code.data;
+        outputData1.value = code.data;
+      } else {
+        outputMessage.hidden = false;
+        outputData.parentElement.hidden = true;
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+</script>
+
+<!-- qr코드 끝 -->
+
+ </body>
+</html>
+</html>

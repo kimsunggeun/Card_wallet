@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+   <!-- qr코드 -->
+   <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+   <script src="./jsQR.js"></script>
+
+<!-- qr코드종료 -->
+   <!--  -->
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="common2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.min.js"></script>
+    <script src="./scrollTrigger.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>카드지갑 불러오기</title>
+</head>
+
+<body>
+    
+    <section class="mob">
+        <header>
+
+            <div class="logo">
+                <a href="Card_wallet_Intro.html">
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                </a>
+            </div>
+<!--         
+                <ul class="header_Menu">
+                    <li style="margin: 0px;" class="header_Menu_P">
+                        Lorem
+                    </li>
+        
+                    <li class="header_Menu_P">
+                        Lorem
+                    </li>
+        
+                    <li class="header_Menu_P">
+                        Lorem
+                    </li>
+        
+                    <li class="header_Menu_P">
+                        Lorem
+                    </li>
+        
+                    <li class="header_Menu_P">
+                        Lorem
+                    </li>
+        
+                </ul> -->
+            </div>
+            <!-- <div class="dropdown">
+                <button onclick="myFunction();" class="dropbtn">Dropdown</button>
+              
+              </div> -->
+        </header>
+    
+        <div class="contentsboxwl visible">
+
+            <div class="titlebox xllx">
+                <p class="titlep">blockchain <span style="font-weight: 200; font-style: normal;">card</span></p>
+            </div>
+
+
+            <div class="count xllx" >
+                <p class="countp " style="font-size: 2em;">지갑 불러오기</p>
+            </div>
+            <form class="walletwar" action="http://btctest.iptime.org:8080/Wallet_search" method="post" onSubmit="return Checked();">
+                <div class="walletbox">               
+                  
+                      <input   type="reset" class="wallet address"  id="1" value="주소">
+         
+                      <input   type="reset" class="wallet key1"  id="2" value="퍼블릭 키">
+
+                      <input  type="reset" class="wallet key2"  id="3" value="프라이빗 키">
+
+               
+                   
+             
+<!-- 
+                <a href="Card_wallet_mnemonic_code.html">
+                    <div class="wallet nimonick" >
+                  
+                        <p class="walletp">
+                         니모닉 단어
+                        </p>
+                    </div>
+                </a> -->
+            </div>
+
+                 
+                    <div class="income" id="4">
+                        <h2 style="text-align: center;">주소</h2>
+                       
+                        
+                           
+                         
+                        <img src="./img/qr.png"  id="modal-open" class="Pu">
+                      
+                        <input  id="address" name="address" class="loadinput soxxxxx"  >
+                        <input class="loadinput soxxxx"   id="qr5"  ><br>
+                     
+                    
+                      
+                    </div>
+             
+                    <div class="income" id="5">
+                        <h2 style="text-align: center; ">퍼블릭키</h2>
+                        <img src="./img/qr.png"  id="modal-open2" class="Pu">
+                        <input class="qrcode" >
+                    </label>
+                <input id="PublicKey" name="PublicKey" class=" loadinput soxxxxx"  >
+                <input class="loadinput soxxxx"    id="qr6"  ><br>
+                
+                    </div>
+       
+                    <div class="income" id="6">
+                        <h2 style="text-align: center;  ">프라이빗키</h2>
+                        <img src="./img/qr.png"  id="modal-open3" class="Pu">
+                        <input class="qrcode" >
+
+                        <input  id="PrivateKey" name="PrivateKey"  class=" loadinput soxxxxx">
+                        <input class="loadinput soxxxx"    id="qr7"  ><br>
+                            
+                       
+                    </div>
+               
+            </div>
+
+         
+
+      
+            <div class="pagenb">
+                    
+                <input  type="submit" class="btn2" style=" appearance: none; -moz-appearance: none; -webkit-appearance: none; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px; color: #fff; font-size: 27px; font-weight: bold;" value="불러오기" >
+
+            </div>
+           
+ 
+      
+            <a href="Card_wallet_Intro.html">
+                <div class="btn1" style="background-color: #525252;">
+                    <p class="btnp" style="font-style: normal;">돌아가기</p>
+                </div>
+            </a>
+        </div>
+         
+
+        
+        </form>
+   
+        <!-- <a href="./index.html">
+            <div class="bitcoin">
+                <p class="biticoinp">@bitcoin <span style="font-style: normal; font-weight: 200;">bank</span></p>
+            </div>
+        </a> -->
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+   
+
+    
+
+
+    
+
+       
+ <!-- 모달시작 -->
+ <div id="modal-container" class="modal unstaged">
+    <div class="modal-overlay">
+  
+    </div>
+    <div class="modal-contents">
+        <div class="loadingMessage" id="loadingMessage">QR코드 인식을위해 카메라 허용을 해주세요.</div>
+
+        <canvas id="canvas" hidden></canvas>
+        <div id="output" hidden>
+          <div id="outputMessage"></div>
+          
+          <div hidden><b>Data:</b> <span id="outputData"></span></div>
+        </div>
+        <div id="qr-reader" class="qr-reader"  style=" margin: 0 auto;">  </div>
+        <input class="inputqr27"    id="qr2" style="border-radius: 6px; width: 320px;"  ><br>
+            <div id="modal-close" class="btn2 close2" style="background:#fff;">
+                <p class="btnp closep2">완료</p>
+            </div>
+        </div>
+  
+  
+    </div>
+
+    <!-- 모달끝 -->
+  
+
+
+
+
+
+
+
+
+    <!-- 버튼값 숨기는코드 -->
+
+
+    <script>
+   
+    $(document).ready(function () {
+        
+
+        $('#4').hide();
+    
+        $("#1").click(function () {
+
+        //     $("#PublicKey").remove()
+        //     $("#qr6").remove()
+
+        //     $("#PrivateKey").remove()
+        //     $("#qr7").remove()
+
+        //    const dad = document.createElement("input")
+        //    dad.name="address"
+        //    dad.id ="address"
+        //    dad.classList.add("loadinput")
+        //    dad.classList.add("soxxxxx")
+
+        //    const dadd = document.createElement("input")
+        //    dadd.name="address"
+        //    dadd.id ="qr5"
+        //    dadd.classList.add("loadinput")
+        //    dadd.classList.add("soxxxx")
+
+        //    $("#4").append(dad);
+        //    $("#4").append(dadd);
+       
+            $("#4").hide();
+            $("#5").hide();
+            $("#6").hide();
+            
+            $("#4" ).fadeIn(250);
+        });
+    });
+
+    </script>
+<script>
+   
+    $(document).ready(function () {
+        $('#5').hide();
+        $("#2").click(function () {
+
+            var test = $(this).val();
+
+        //     $("#address").remove()
+        //     $("#qr5").remove()
+            
+           
+        //     $("#PrivateKey").remove()
+        //     $("#qr7").remove()
+
+           
+
+        //     const dad = document.createElement("input")
+        //    dad.name="PublicKey"
+        //    dad.id ="PublicKey"
+        //    dad.classList.add("loadinput")
+        //    dad.classList.add("soxxxxx")
+
+        //    const dadd = document.createElement("input")
+        //    dadd.name="PublicKey"
+        //    dadd.id ="qr6"
+        //    dadd.classList.add("loadinput")
+        //    dadd.classList.add("soxxxx")
+
+        //    $("#5").append(dad);
+        //    $("#5").append(dadd);
+
+            
+            $("#4").hide();
+            $("#5").hide();
+            $("#6").hide();
+            
+            $("#5" ).fadeIn(250);
+        });
+    });
+
+    </script>
+
+    
+  <script>
+   
+    $(document).ready(function () {
+        $('#6').hide();
+        $("#3").click(function () {
+
+        //     $("#address").remove()
+        //     $("#qr5").remove()
+            
+        //     $("#PublicKey").remove()
+        //     $("#qr6").remove()
+
+
+        //     var test = $(this).val();
+        //     $("#address").remove()
+        //     const dad = document.createElement("input")
+        //    dad.name="PrivateKey"
+        //    dad.id ="PrivateKey"
+        //    dad.classList.add("loadinput")
+        //    dad.classList.add("soxxxxx")
+
+        //    const dadd = document.createElement("input")
+        //    dadd.name="PrivateKey"
+        //    dadd.id ="qr7"
+        //    dadd.classList.add("loadinput")
+        //    dadd.classList.add("soxxxx")
+
+        //    $("#6").append(dad);
+        //    $("#6").append(dadd);
+
+            $("#4").hide();
+            $("#5").hide();
+            $("#6").hide();
+            $("#6" ).fadeIn(250);
+        });
+    });
+
+    </script>
+
+ 
+    <!-- 버튼값 숨기는코드 종료 -->
+
+
+
+    <!-- 버튼값 색입히는코드 -->
+
+<script>
+     var div2 = document.getElementsByClassName("wallet");
+
+function handleClick(event) {
+  console.log(event.target);
+  // console.log(this);
+  // 콘솔창을 보면 둘다 동일한 값이 나온다
+
+  console.log(event.target.classList);
+
+  if (event.target.classList[1] === "clicked") {
+    event.target.classList.remove("clicked");
+  } else {
+    for (var i = 0; i < div2.length; i++) {
+      div2[i].classList.remove("clicked");
+    }
+
+    event.target.classList.add("clicked");
+  }
+}
+
+function init() {
+  for (var i = 0; i < div2.length; i++) {
+    div2[i].addEventListener("click", handleClick);
+  }
+}
+
+init();
+</script>
+
+    
+    <!-- 버튼값 색입히는코드 종료-->
+
+
+    
+<!-- qr코드 시작 -->
+  <script>
+
+    
+    function onScanSuccess(decodedText, ) {
+       
+       $('#qr').val(decodedText);
+       $('#qr2').val(decodedText)
+       $('#qr3').val(decodedText)
+       $('#qr4').val(decodedText)
+       $('#address').val(decodedText)
+       $('#PublicKey').val(decodedText)
+       $('#PrivateKey').val(decodedText)
+
+    
+         
+  
+}
+
+
+   
+ 
+   
+   
+   
+   
+   
+   var html5QrcodeScanner = new Html5QrcodeScanner(
+   
+   
+   
+   
+   
+       'qr-reader', { fps: 10, qrbox: 250 });
+   
+   
+       
+   html5QrcodeScanner.render(onScanSuccess);
+
+
+document.getElementById('qr-reader__status_span').style.display="none"
+       document.getElementById('qr-reader__scan_region').style.display="none"
+       document.getElementById('qr-reader__dashboard_section_csr').style.display="none"
+       document.getElementById('qr-reader__dashboard_section_swaplink').innerText = "QR코드 스캔하로가기"
+</script> 
+<!-- qr코드 끝 -->
+
+<!-- 모달 코드 -->
+
+<script>
+
+    document.getElementById('modal-open').addEventListener("click", function (e) {
+        $('body').css("overflow", "hidden");
+        document.getElementById('modal-container').classList.toggle('opaque');
+        document.getElementById('modal-container').classList.toggle('unstaged');
+    });
+  
+  
+    document.getElementById('modal-close').addEventListener("click", function (e) {
+        document.getElementById('modal-container').classList.toggle('opaque');
+  
+        document.getElementById('modal-container').addEventListener('transitionend', function (e) {
+            this.classList.toggle('unstaged');
+            this.removeEventListener('transitionend', arguments.callee);
+            $('body').css("overflow", "scroll");
+  
+        });
+  
+    });
+  
+    </script>
+  
+  <!-- 모달 코드끝 -->
+
+  <script>
+
+    document.getElementById('modal-open2').addEventListener("click", function (e) {
+        $('body').css("overflow", "hidden");
+        document.getElementById('modal-container').classList.toggle('opaque');
+        document.getElementById('modal-container').classList.toggle('unstaged');
+    });
+  
+  
+    document.getElementById('modal-close2').addEventListener("click", function (e) {
+        document.getElementById('modal-container').classList.toggle('opaque');
+  
+        document.getElementById('modal-container').addEventListener('transitionend', function (e) {
+            this.classList.toggle('unstaged');
+            this.removeEventListener('transitionend', arguments.callee);
+            $('body').css("overflow", "scroll");
+  
+        });
+  
+    });
+  
+    </script>
+  
+  <!-- 모달 코드끝 -->
+
+
+  <script>
+
+    document.getElementById('modal-open3').addEventListener("click", function (e) {
+        $('body').css("overflow", "hidden");
+        document.getElementById('modal-container').classList.toggle('opaque');
+        document.getElementById('modal-container').classList.toggle('unstaged');
+    });
+  
+  
+    document.getElementById('modal-close3').addEventListener("click", function (e) {
+        document.getElementById('modal-container').classList.toggle('opaque');
+  
+        document.getElementById('modal-container').addEventListener('transitionend', function (e) {
+            this.classList.toggle('unstaged');
+            this.removeEventListener('transitionend', arguments.callee);
+            $('body').css("overflow", "scroll");
+  
+        });
+  
+    });
+  
+    </script>
+  
+  <!-- 모달 코드끝 -->
+
+ 
+ <script>
+    var video = document.createElement("video");
+    var canvasElement = document.getElementById("canvas");
+    var canvas = canvasElement.getContext("2d");
+    var loadingMessage = document.getElementById("loadingMessage");
+    var outputContainer = document.getElementById("output");
+    var outputMessage = document.getElementById("outputMessage");
+    var outputData1 = document.getElementById("qr5");
+    var outputData2 = document.getElementById("qr6");
+    var outputData3 = document.getElementById("qr7");
+
+    function drawLine(begin, end, color) {
+      canvas.beginPath();
+      canvas.moveTo(begin.x, begin.y);
+      canvas.lineTo(end.x, end.y);
+      canvas.lineWidth = 4;
+      canvas.strokeStyle = color;
+      canvas.stroke();
+    }
+
+    // Use facingMode: environment to attemt to get the front camera on phones
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream) {
+      video.srcObject = stream;
+      video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+      video.play();
+      requestAnimationFrame(tick);
+    });
+
+    function tick() {
+      loadingMessage.innerText = "⌛ Loading video..."
+      if (video.readyState === video.HAVE_ENOUGH_DATA) {
+        loadingMessage.hidden = true;
+        canvasElement.hidden = false;
+        outputContainer.hidden = false;
+
+        canvasElement.height = video.videoHeight;
+        canvasElement.width = video.videoWidth;
+        canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+        var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
+        var code = jsQR(imageData.data, imageData.width, imageData.height, {
+          inversionAttempts: "dontInvert",
+        });
+        if (code) {
+          drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
+          drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
+          drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
+          drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
+          outputMessage.hidden = true;
+          outputData.parentElement.hidden = false;
+          outputData.innerText = code.data;
+          outputData1.value = code.data;
+          outputData2.value = code.data;
+          outputData3.value = code.data;
+          
+        } else {
+          outputMessage.hidden = false;
+          outputData.parentElement.hidden = true;
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+  </script>
+
+</body>
+
+</html>

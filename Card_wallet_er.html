@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="common2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.min.js"></script>
+    <script src="./scrollTrigger.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>이체완료</title>
+</head>
+
+<body>
+  
+
+    <section class="mob">
+        <header>
+
+            <div class="logo">
+                <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                </a>
+              
+            </div>
+            <div class="logoutbox">
+                <a href="Card_wallet_Intro.html">
+                    <p class="logout">로그아웃</p>
+                </a>
+            </div>
+                <!-- <ul class="header_Menu">
+                    <li style="margin: 0px;" class="header_Menu_P">
+                        Lorem
+                    </li>
+        
+                    <li class="header_Menu_P">
+                        Lorem
+                    </li>
+        
+                    <li class="header_Menu_P">
+                        Lorem
+                    </li>
+        
+                    <li class="header_Menu_P">
+                        Lorem
+                    </li>
+        
+                    <li class="header_Menu_P">
+                        Lorem
+                    </li>
+        
+                </ul> -->
+            </div>
+            <!-- <div class="dropdown">
+                <button onclick="myFunction();" class="dropbtn">Dropdown</button>
+              
+              </div> -->
+        </header>
+        <!-- <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Main</a>
+            <a href="indexnew.html">Card Check</a>
+            <a href="sub_4.html">FAQ</a>
+          </div> -->
+        <div class="contentsbox visible">
+
+            <div class="titlebox none" style=" padding-bottom: 48px; padding-top: 48px;">
+                <p class="titlep ">blockchain <span style="font-weight: 200; font-style: normal;">card</span></p>
+            </div>
+            <div class="paycon">
+                <div class="payimgbox">
+                    <img src="./img/sss.png" >
+                </div>
+                <div class="paypbox">
+                  
+                    <p class="payp" id="Check">
+                       <br>
+                       <span style="color: #a3a3a3; font-size: 12px;" id="reason"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="payconetntsbox">
+                <!-- <div class="payconentntsleftbox">
+                    <p class="payconetntsp" style=" color: #a3a3a3;">Hash</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;">입금 주소</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;">날짜</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;"> 거래후 잔액</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;">수수료</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;">Total input</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;">Total Output</p>
+                </div>
+                <div class="payconentntsrightbox">
+                    <p class="payconetntsp">d3bdefe0dd7f353417327fca209e6745e66f29ab7f0c6d904815b9109606f256
+                    </p>
+                    <p class="payconetntsp">L4D8mxByCFhDpWaiRmzW3fnaXnWGZNt4ccVeG89pXpKZHPZfPauR</p>
+                    <p class="payconetntsp">2021-07-23 22:44</p>
+                    <p class="payconetntsp">0</p>
+                    <p class="payconetntsp">(Normal)0.00000226</p>
+                    <p class="payconetntsp">0.00992159</p>
+                    <p class="payconetntsp">0.00991933</p>
+                </div> -->
+
+
+            </div>
+<!-- 
+            <div class="paymo">
+                <div class="payconentntsleftbox">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">Hash</p>
+                </div>
+                <div class="payconentntsrightbox">
+                    <p class="payconetntsp">d3bdefe0dd7f353417327fca209e6745e66f29ab7f0c6d904815b9109606f256</p>
+                </div>
+                <div class="payconentntsleftbox">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">입금 주소</p>
+                </div>
+                <div class="payconentntsrightbox">
+                    <p class="payconetntsp">L4D8mxByCFhDpWaiRmzW3fnaXnWGZNt4ccVeG89pXpKZHPZfPauR</p>
+                </div>
+                <div class="payconentntsleftbox">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">날짜</p>
+                </div>
+                <div class="payconentntsrightbox">
+                    <p class="payconetntsp">2021-07-23 22:44</p>
+                </div>
+                <div class="payconentntsleftbox">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">거래후 잔액</p>
+                </div>
+                <div class="payconentntsrightbox">
+                    <p class="payconetntsp">0</p>
+                </div>
+                <div class="payconentntsleftbox">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">거래 수수료</p>
+                </div>
+                <div class="payconentntsrightbox">
+                    <p class="payconetntsp">(Normal)0.00000226</p>
+                </div>
+
+                <div class="payconentntsleftbox">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">거래 수수료</p>
+                </div>
+                <div class="payconentntsrightbox">
+                    <p class="payconetntsp">0.00992159</p>
+                </div>
+
+                <div class="payconentntsleftbox">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">거래 수수료</p>
+                </div>
+                <div class="payconentntsrightbox">
+                    <p class="payconetntsp">0.00991933</p>
+                </div>
+            </div> -->
+
+            <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                <div class="btn1 pay">
+                    <p class="btnp" style="font-style: normal; font-weight: bold;">확인</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    
+
+
+<!--reason 값 받아오는코드  -->
+
+<script>
+    function reason() {
+      var el = document.getElementById('reason')
+      fetch("http://10.159.29.84:8080/Wallet_search")
+
+        .then(res => res.json())
+        .then(res => {
+          console.log(res);
+          var reason = res.reason
+          el.innerHTML = "(사유: "+reason+".)"
+        }).catch(err => {
+          
+        });
+    }
+
+    reason()
+
+  
+  </script>
+
+    <!--Check 값 받아오는코드  -->
+<script>
+    function Check() {
+      var el = document.getElementById('Check')
+      fetch("http://10.159.29.84:8080/Wallet_search")
+
+        .then(res => res.json())
+        .then(res => {
+          console.log(res);
+          var Check = res.Check
+          el.innerHTML = Check
+        }).catch(err => {
+          
+        });
+    }
+
+    Check()
+
+   
+  </script>
+</body>
+
+</html>

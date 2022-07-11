@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="common2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.min.js"></script>
+    <script src="./scrollTrigger.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>이체완료</title>
+</head>
+
+<body>
+  
+
+    <section class="mob">
+        <header>
+
+            <div class="logo">
+                <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                </a>
+            </div>
+        
+             
+                <div class="logoutbox">
+                  <a href="Card_wallet_Intro.html">
+                      <p class="logout">로그아웃</p>
+                  </a>
+              </div>
+              
+          
+        </header>
+    
+        <div class="contentsbox visible">
+
+            <div class="titlebox none" style=" padding-bottom: 48px; padding-top: 48px;">
+                <p class="titlep ">blockchain <span style="font-weight: 200; font-style: normal;">card</span></p>
+            </div>
+            <div class="paycon">
+                <a href="Card_wallet_transfer_fail.html">
+                <div class="payimgbox">
+                    <img src="./img/Group 342.png">
+                </div>
+            </a>
+                <div class="paypbox">
+                
+                    <p class="payp">
+                        트렌잭션 생성완료
+                    </p>
+                </div>
+            </div>
+            <div class="payconetntsbox">
+                <div class="payconentntsleftbox">
+                    <p class="payconetntsp" style=" color: #a3a3a3;">Hash</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;">입금 주소</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;">컨펌여부</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;"> 날짜</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;">총출금금액</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;">수수료</p>
+                    <p class="payconetntsp"  style=" color: #a3a3a3;">거래후 잔액</p>
+                </div>
+                <div class="payconentntsrightbox">
+                    <p class="payconetntsp"  style="color: #EF4234; font-weight: bold;" id="Hash"></p>
+                    <p class="payconetntsp"  style="color: #EF4234; font-weight: bold;" id="Deposit_address"></p>
+                    <p class="payconetntsp" id="Status"></p>
+                    <p class="payconetntsp" id="time"></p>
+                    <p class="payconetntsp" id="Recipient_Amount_Plus_fee"></p>
+                    <p class="payconetntsp" id="fee"></p>
+                    <p class="payconetntsp" id="Balance_after_transaction"></p>
+                </div>
+
+
+            </div>
+
+            <div class="paymo">
+                <div class="payconentntsleftbox ">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">Hash</p>
+                </div>
+                <div class="payconentntsrightbox ">
+                    <p class="payconetntsp " style="color: #EF4234; font-weight: bold; font-size: 10px;" id="Hashmo"></p>
+                </div>
+                <div class="payconentntsleftbox ">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3; ">입금 주소</p>
+                </div>
+                <div class="payconentntsrightbox">
+                    <p class="payconetntsp " style="color: #EF4234; font-weight: bold; font-size: 16px;" id="Deposit_addressmo"></p>
+                </div>
+                <div class="payconentntsleftbox do">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">컨펌여부</p>
+                </div>
+                <div class="payconentntsrightbox doo">
+                    <p class="payconetntsp" id="Statusmo"></p>
+                </div>
+                <div class="payconentntsleftbox do">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">날짜</p>
+                </div>
+                <div class="payconentntsrightbox doo">
+                    <p class="payconetntsp" id="timemo"></p>
+                </div>
+                <div class="payconentntsleftbox do">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">총출금금액</p>
+                </div>
+                <div class="payconentntsrightbox doo">
+                    <p class="payconetntsp" id="Recipient_Amount_Plus_feemo"></p>
+                </div>
+
+                <div class="payconentntsleftbox do">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">수수료</p>
+                </div>
+                <div class="payconentntsrightbox doo">
+                    <p class="payconetntsp" id="feemo"></p>
+                </div>
+
+                <div class="payconentntsleftbox do">
+                    <p class="payconetntsp" style="font-size: 12px; color: #a3a3a3;">거래후 잔액</p>
+                </div>
+                <div class="payconentntsrightbox doo">
+                    <p class="payconetntsp" id="Balance_after_transactionmo"></p>
+                </div>
+            </div>
+
+            <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                <div class="btn1 pay">
+                    <p class="btnp" style="font-style: normal; font-weight: bold;">확인</p>
+                </div>
+            </a>
+        </div>
+
+
+
+        
+    </section>
+
+
+
+
+
+
+<!-- hash값 받아오는코드 -->
+
+    <script>
+        function Hash() {
+          var el = document.getElementById('Hash')
+          fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+    
+            .then(res => res.json())
+            .then(res => {
+              
+              var Hash = res.Hash
+              el.innerHTML =  Hash
+            }).catch(err => {
+              el.innerHTML = "$0.00 - Error";
+            });
+        }
+    
+        Hash()
+    
+    
+      </script>
+
+
+
+<!-- hash값 받아오는코드(모바일) -->
+<script>
+    function Hashmo() {
+      var el = document.getElementById('Hashmo')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+       
+          var Hash = res.Hash
+          el.innerHTML =  Hash
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Hashmo()
+
+
+  </script>
+
+  
+<!-- Deposit_address 받아오는코드 -->
+
+<script>
+    function Deposit_address() {
+      var el = document.getElementById('Deposit_address')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+         
+          var Deposit_address = res.Deposit_address
+          el.innerHTML =  Deposit_address
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Deposit_address()
+
+
+  </script>
+
+
+  
+<!-- Deposit_address 받아오는코드(모바일) -->
+<script>
+    function Deposit_addressmo() {
+      var el = document.getElementById('Deposit_addressmo')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var Deposit_address = res.Deposit_address
+          el.innerHTML =  Deposit_address
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Deposit_addressmo()
+
+
+  </script>
+
+
+<!-- Status 받아오는코드 -->
+<script>
+    function Status() {
+      var el = document.getElementById('Status')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var Status = res.Status
+          el.innerHTML =  Status
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Status()
+
+
+  </script>
+
+
+<!-- Balance_after_transaction 받아오는코드(모바일) -->
+<script>
+    function Statusmo() {
+      var el = document.getElementById('Statusmo')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var Status = res.Status
+          el.innerHTML =  Status
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Statusmo()
+
+
+  </script>
+
+<!-- time 받아오는코드 -->
+<script>
+    function time() {
+      var el = document.getElementById('time')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var time = res.time
+          el.innerHTML =  time
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    time()
+
+
+  </script>
+
+
+
+
+<!-- time 받아오는코드(모바일) -->
+<script>
+    function timemo() {
+      var el = document.getElementById('timemo')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var time = res.time
+          el.innerHTML =  time
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    timemo()
+
+
+  </script>
+
+<!-- Recipient_Amount_Plus_fee 받아오는코드 -->
+<script>
+    function Recipient_Amount_Plus_fee() {
+      var el = document.getElementById('Recipient_Amount_Plus_fee')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var Recipient_Amount_Plus_fee = res.Recipient_Amount_Plus_fee
+          el.innerHTML =  Recipient_Amount_Plus_fee
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Recipient_Amount_Plus_fee()
+
+
+  </script>
+
+ <!-- Recipient_Amount_Plus_fee 받아오는코드(모바일) -->
+<script>
+    function Recipient_Amount_Plus_feemo() {
+      var el = document.getElementById('Recipient_Amount_Plus_feemo')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var Recipient_Amount_Plus_fee = res.Recipient_Amount_Plus_fee
+          el.innerHTML =  Recipient_Amount_Plus_fee
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Recipient_Amount_Plus_feemo()
+
+
+  </script>
+
+ <!-- fee 받아오는코드 -->
+<script>
+    function fee() {
+      var el = document.getElementById('fee')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var fee = res.fee
+          el.innerHTML =  fee
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    fee()
+
+
+  </script>
+
+
+ <!-- fee 받아오는코드(모바일) -->
+<script>
+    function feemo() {
+      var el = document.getElementById('feemo')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var fee = res.fee
+          el.innerHTML =  fee
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    feemo()
+
+
+  </script>
+
+
+
+ <!-- Balance_after_transaction 받아오는코드 -->
+<script>
+    function Balance_after_transaction() {
+      var el = document.getElementById('Balance_after_transaction')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var Balance_after_transaction = res.Balance_after_transaction
+          el.innerHTML =  Balance_after_transaction
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Balance_after_transaction()
+
+
+  </script>
+
+
+
+
+ <!-- Balance_after_transaction 받아오는코드(모바일) -->
+  <script>
+    function Balance_after_transactionmo() {
+      var el = document.getElementById('Balance_after_transactionmo')
+      fetch("http://10.159.29.84:8080/rawtransaction_Signature")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var Balance_after_transaction = res.Balance_after_transaction
+          el.innerHTML =  Balance_after_transaction
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    Balance_after_transactionmo()
+
+
+  </script>
+ 
+    
+</body>
+
+</html>

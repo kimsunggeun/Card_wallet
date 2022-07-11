@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="common2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.min.js"></script>
+    <script src="./scrollTrigger.js"></script>
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>수신하기</title>
+</head>
+
+<body>
+   
+
+
+    <section class="mob" style="position: relative;">
+        <header>
+
+            <div class="logo">
+                <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                </a>
+            </div>
+        
+            <div class="logoutbox">
+                <a href="Card_wallet_Intro.html">
+                    <p class="logout">로그아웃</p>
+                </a>
+            </div>
+            
+           
+        </header>
+        <!-- <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Main</a>
+            <a href="indexnew.html">Card Check</a>
+            <a href="sub_4.html">FAQ</a>
+          </div> -->
+        <div class="contentsbox visible">
+
+            <div class="titlebox keynumbermo">
+                <p class="titlep">blockchain <span style="font-weight: 200; font-style: normal;">수신하기</span></p>
+            </div>
+
+            <div class="titlebox none">
+                <p class="titlep">blockchain <span style="font-weight: 200; font-style: normal;">card</span></p>
+            </div>
+            
+     
+            <div class="btn1 none" style="cursor: auto;">
+                <p class="btnp">blockchain <span style="font-style: normal; ">수신하기</span></p>
+            </div>
+
+            <div class="contentpbox">
+
+                <p  class="contentp">
+                    Public address
+
+                    <button onclick="copy_to_clipboard()"
+                        style="border: none; background: none; display: inline-block;">
+                        <img style="cursor: pointer;" src="./img/cluboad.png">
+                    </button>
+                <div id="toast">
+                    <p class="copyp">Copy!</p>
+                </div>
+                </p>
+
+            </div>
+
+            <div class="keynumber">
+                <div class="keynumber" >
+                    <input id="myInput"
+                        style="border: none; background: none; text-align: center; font-weight: 200; font-style: italic; color: #fff; width: 60%; "
+                       readonly>
+                </div>
+                
+           
+                  
+            </div>
+
+            <div id="qrcode" class="qrcode5" onclick="copy_to_clipboard()" >
+                <img src="http://10.159.29.84:8080/address_qrcode" style="width: 100%;">
+            </div>
+            <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                <div class="btn1 back">
+                    <p style="font-style: normal;" class="btnp"> 돌아가기</p>
+                </div>
+            </a>
+        </div>
+       
+    </section>
+
+
+
+
+</body>
+
+
+    <!-- Address 값 가져오기  -->
+
+<script>
+    function get_pric4e() {
+     
+      fetch("http://10.159.29.84:8080/Wallet_search")
+
+        .then(res => res.json())
+        .then(res => {
+          console.log(res);
+          var pri2ce = res.Address
+         
+          $('#myInput').val(pri2ce);
+
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    get_pric4e()
+
+    // setInterval(get_pric2e, 10000)
+  </script>
+
+
+
+
+
+
+
+
+    <!-- 인풋 값 복사하기  -->
+
+<script>
+
+
+
+
+
+    function copy_to_clipboard() {
+
+        
+        
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        document.execCommand("Copy");
+
+
+        var x = document.getElementById("toast");
+
+
+        x.className = "show";
+
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 2000);
+    }
+
+</script>
+
+
+
+
+ <!-- 토스트메시지 띄우기 -->
+<script>
+    function toast2() {
+     
+        var x = document.getElementById("toast");
+
+      
+        x.className = "show";
+
+        
+        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+    }
+</script>
+
+
+</html>

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="common2.css">
+        <!-- qr코드 인식 -->
+    <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
+    <script src="./jsQR.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+      <!--  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.min.js"></script>
+    <script src="./scrollTrigger.js"></script>
+
+    <script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js"></script>
+   
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>이체하기</title>
+</head>
+
+<body>
+   
+
+    <section class="mob">
+
+        
+        <header style="z-index: 0;">
+            <div class="logo">
+                <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                </a>
+            </div>
+
+            <div class="logoutbox">
+                <a href="Card_wallet_Intro.html">
+                    <p class="logout">로그아웃</p>
+                </a>
+            </div>
+            
+        </header>
+
+
+        <div class="contentsbox visible">
+
+            <div class="titlebox keynumbermo">
+                <p class="titlep">blockchain <span style="font-weight: 200; font-style: normal;">이체</span></p>
+            </div>
+
+            <div class="titlebox none" >
+                <p class="titlep">blockchain <span style="font-weight: 200; font-style: normal;">card</p>
+            </div>
+            <div class="count bod" >
+                <p id="doxxx" style="color: #a3a3a3;">                     </p>
+            </div>
+            <div class="btn2 rqwe none" style="background:#362120; cursor: auto;">
+                <p class="btnp">blockchain <span style="font-style: normal;">이체</span></p>
+            </div>
+
+            <div class="contentpbox">
+
+                <p  class="contentp">
+                    Public address
+
+                  
+                </p>
+                <form  action="http://10.159.29.84:8080/Transaction_Doublecheck" method="post">
+                <input class="inputqr"  name="Transmission_address" id="qr" style="border-radius: 6px;"  required>
+              
+                <label class="qrlabel er1">
+                    <img src="./img/qr.png" class="Pa er2" id="modal-open" >
+                
+                    <input class="qrcode" >
+                </label>
+                <p class="contentp" style="margin-top:20px; ">
+                    Amount
+
+                </p>
+
+                <input class="inputnb" name="Transmission_Amount" placeholder="금액입력" style="border-radius: 6px;" value="" id="gma"   onkeyup="printName()"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
+                <div class="money"  >
+                    <label for="che"  class="moneyp"  ><p class="moneyp" >보유중인블록체인: <span value="" onclick="statusChange(this)" id="doxx"></span></p></label>
+                    <br>
+                    
+                    <input type="checkbox" id="che" name="abc" >
+
+                    <label for="che"  class="moneyp"  >거래수수료 포함</label>
+
+                </div>
+                <div class="count2" style="padding-top: 10px;" >
+                    <p id="btc2" class="countp2"><span style="font-size: 0.5em;">USD</span></p>
+                </div>
+            </div>
+            <div style="width: 239px;
+            margin: 0 auto;">
+        
+            <input type="button" class="btn2 rqwe" style="margin-bottom: 10px; font-style: normal; font-weight: bold; color: #fff; font-size: 27px;"  value="이체하기" >
+        </div>
+       
+            <div class="stting" id="modal_btn">
+                <p class="moneyp" style="padding-bottom:5px;">이체 고급설정</p>
+                <div class="won">
+            
+                </div>
+            </div>
+        
+            <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                <div class="btn1 back" style="margin-top: 15px;">
+                    <p style="font-style: normal;" class="btnp"> 돌아가기</p>
+                </div>
+            </a>
+        </div>
+
+
+
+
+
+
+
+        <div class="modal_wrap" style="overflow: scroll;">
+            <!-- 설정완료 페이지 -->
+            <div class="seting">
+                <div class="setingimgbox">
+                    <img src="./img/Group 341.png">
+                </div>
+                <div class="setingpbox" style="margin-bottom: 40px;">
+                    <p class="setingp">설정완료</p>
+                </div>
+
+                <div class="setingpbox">
+                    <p class="setingp2" style="margin-bottom: 20px;">변경사항</p>
+                    
+                    <p style="display: inline-block;"> 수수료 : </p>
+                    <p id = 'rido' style="display: inline-block;"></p>
+                    <br>
+                    <div id = "opret">
+                   <p style="display: inline-block;"> Op_Return :</p>
+                    <p id='result' style="display: inline-block;"></p>
+                    </div>
+                </div>
+
+                <div class="modal_close2 showx" style="background: #3D5531;">
+                    <p class="btnp" style=" font-style: normal;font-weight: bold;">돌아가기</p></a>
+                </div>
+                   
+             
+
+
+
+
+            </div>
+           
+            <div class="hidex">
+                <div class="titlebox ooo">
+                    <p class="titlep" style="font-style: normal;">Setting </p>
+                </div>
+                <p class="contentp"
+                    style=" color: #8B1919; font-weight: normal;   margin-top: 60px; text-align: center; font-size: 24px;">
+                   Fee
+                </p>
+
+                <div class="minerfee">
+                    <div class="minerfeeop">
+                        <input type="radio" id="ckbox1" name='ckbox'   onclick='getGender(event)'   value="Normal"
+                            class="minerfeeop"><label class="on" for="ckbox1">Normal</label>
+                    </div>
+
+                    <div class="minerfeeop">
+                        <input type="radio" id="ckbox2" name='ckbox'   onclick='getGender(event)'  value="Low_Priority"
+                            class="minerfeeop"><label class="on" for="ckbox2" >Low Priority</label>
+                    </div>
+
+                    <div class="minerfeeop">
+                        <input type="radio" id="ckbox3" name='ckbox'   onclick='getGender(event)'   value="Economy"
+                            class="minerfeeop"><label class="on" for="ckbox3" >Economy</label>
+                    </div>
+
+                    <div class="minerfeeop">
+                        <input type="radio" id="ckbox4" name='ckbox'    onclick='getGender(event)'  value="Priority"
+                            class="minerfeeop"><label  class="on" for="ckbox4">Priority</label>
+                    </div>
+
+                </div>
+
+
+                <div class="minerfee_hidebox" id="opNormal" >
+                    <p class="minerfee_hideboxbp">Normal를 선택하셨습니다.</p>
+                  
+                    <p class="minerfee_hideboxp">예상블럭 : 20개</p>
+                    <p class="minerfee_hideboxp">예상 소요시간 : 20분</p>
+
+                </div>
+
+
+                <div class="minerfee_hidebox" id="opLow_Priority">
+                    <p class="minerfee_hideboxbp">Low Priority를 선택하셨습니다.</p>
+                   
+                    <p class="minerfee_hideboxp">예상블럭 : 50개</p>
+                    <p class="minerfee_hideboxp">예상 소요시간 : 40분</p>
+
+                </div>
+
+
+
+                <div class="minerfee_hidebox" id="opEconomy">
+                    <p class="minerfee_hideboxbp">Economy를 선택하셨습니다.</p>
+                   
+                    <p class="minerfee_hideboxp">예상블럭 : 5개</p>
+                    <p class="minerfee_hideboxp">예상 소요시간 : 8분</p>
+
+                </div>
+
+
+                <div class="minerfee_hidebox" id="opPriority">
+                    <p class="minerfee_hideboxbp">Priority를 선택하셨습니다.</p>
+                   
+                    <p class="minerfee_hideboxp">예상블럭 : 2개</p>
+                    <p class="minerfee_hideboxp">예상 소요시간 : 4분</p>
+
+                </div>
+
+
+
+                 <p id="do" class="contentp"
+                    style=" color: #8B1919; font-weight: normal;   margin-top: 40px;margin-bottom: 40px;text-align: center; font-size: 24px;">
+                    Op_Return <input type="checkbox" id="op" data-id="text1" class="checked" >
+                </p>
+                <div class="co" id="text1">
+                    <input class="DOC_TEXT" placeholder=" ‘74byte’ 를 안넘게 내용을 담아주세요" name="DOC_TEXT" id='name'  onkeyup='printName1()' >
+
+                    <span class="counter" id="counter">( 0 / 74 )</span>
+                </div>
+
+            
+          
+ 
+            <!-- 모달끝 -->
+
+                <div class="btn1" >
+                <p style="font-style: normal; font-weight: bold; font-size: 27px; color: #fff; padding-top: 26px;">저장하기</p>    
+                </div>
+
+               
+                <div class="modal_close">
+                    <p class="btnp" style=" font-style: normal;font-weight: bold;">돌아가기</p></a>
+                </div>
+            </div>
+           
+        </div>
+
+
+            <!-- 모달시작 -->
+            <div id="modal-container" class="modal unstaged">
+                <div class="modal-overlay">
+    
+                </div>
+                <div class="modal-contents">
+                    <div class="loadingMessage" id="loadingMessage">QR코드 인식을위해 카메라 허용을 해주세요.</div>
+
+                    <canvas id="canvas" hidden></canvas>
+                    <div id="output" hidden>
+                      <div class="outputMessage" id="outputMessage"></div>
+                      
+                      <div hidden><b>Data:</b> <span id="outputData"></span></div>
+                    </div>
+
+                    <div id="qr-reader"  class="qr-reader" style=" margin: 0 auto;">  </div>
+                    <input class="inputqr27"    id="qr2" style="border-radius: 6px; width: 320px;"  ><br>
+                        <div id="modal-close" class="btn2 close2" style="background:#fff;">
+                            <p class="btnp closep2">완료</p>
+                        </div>
+                    </div>
+    
+    
+                </div>
+                <!-- 모달끝 -->
+    
+</form>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+ <!-- Address 받아오는코드 -->
+
+<script>
+    function get_pric3e() {
+      var el = document.getElementById('doxxx')
+      fetch("http://10.159.29.84:8080/Wallet_search")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var pri3ce = res.Address
+          el.innerHTML = "Your Address : "+ pri3ce
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    get_pric3e()
+
+   
+  </script>
+
+<!-- Final_Balance 받아오는코드 -->
+
+<script>
+    function get_pric2e() {
+      var el = document.getElementById('doxx')
+      fetch("http://10.159.29.84:8080/Wallet_search")
+
+        .then(res => res.json())
+        .then(res => {
+
+          var pri2ce = res.Final_Balance
+          el.innerHTML = pri2ce
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    get_pric2e()
+
+   
+  </script>
+
+
+<!-- 수수료 설정부분  -->
+<script>
+    function getGender(event) {
+  document.getElementById('rido').innerText = 
+    event.target.value;
+    document.getElementById('rido2').innerText = 
+    event.target.value;
+}
+</script>
+
+
+<!-- op리턴 관련  -->
+<script>
+    function printName()  {
+  const name = document.getElementById('name').value;
+  document.getElementById("result").innerText =  name;
+}
+</script>
+
+
+
+<!-- 모달 오픈 코드 -->
+
+
+<script>
+    $(function () {
+        $('.showx').click(function () {
+            $('.won').show()
+            
+        })
+
+        $('.modal_close').click(function () {
+            $('.won').hide()
+            
+        })
+    })
+</script>
+
+
+<!-- 수수료 부분 글자 색씌우기 -->
+
+<script>
+    $(function () {
+        $('.on').click(function () {
+            $('.on').removeClass('red')
+            $(this).addClass('red')
+        })
+    })
+</script>
+
+
+
+<!--  모달 오픈 코드 2 -->
+<script>
+
+    document.getElementById('modal-open').addEventListener("click", function (e) {
+        $('body').css("overflow", "hidden");
+        document.getElementById('modal-container').classList.toggle('opaque');
+        document.getElementById('modal-container').classList.toggle('unstaged');
+    });
+
+
+    document.getElementById('modal-close').addEventListener("click", function (e) {
+        document.getElementById('modal-container').classList.toggle('opaque');
+
+        document.getElementById('modal-container').addEventListener('transitionend', function (e) {
+            this.classList.toggle('unstaged');
+            this.removeEventListener('transitionend', arguments.callee);
+            $('body').css("overflow", "scroll");
+
+        });
+
+    });
+</script>
+
+
+<script>
+    window.onload = function () {
+
+        function onClick() {
+            document.querySelector('.modal_wrap').style.display = 'block';
+            document.querySelector('.black_bg').style.display = 'block';
+            $('body').css("overflow", "hidden");
+        }
+        function offClick() {
+            document.querySelector('.modal_wrap').style.display = 'none';
+            document.querySelector('.black_bg').style.display = 'none';
+            $('body').css("overflow", "scroll");
+
+
+        }
+
+        document.getElementById('modal_btn').addEventListener('click', onClick);
+        document.querySelector('.modal_close').addEventListener('click', offClick);
+        document.querySelector('.modal_close2').addEventListener('click', offClick);
+    };
+</script>
+
+
+
+
+
+
+
+
+<!--  비트코인 시세값 가져오는코드 -->
+
+<script>
+    
+    function get_price() {
+      const name = document.getElementById('gma').value;
+      var el = document.getElementById('btc2')
+      
+      fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+
+        .then(res => res.json())
+        .then(res => {
+          console.log(res);
+          var price = res.bitcoin.usd
+          var fif =  price * name
+          el.innerHTML =  "≈" +fif.toFixed(3)
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    
+
+    get_price()
+
+    setInterval(get_price, 2500)
+
+
+
+  </script>
+
+<!-- op 리턴값 글자수세는코드 -->
+
+ <script>  
+  $('.DOC_TEXT').keyup(function (e) {
+        var content = $(this).val()
+        $('#counter').html("(" + content.length + " /  74)");    //글자수 실시간 카운팅
+
+
+        if (content.length > 74) {
+            alert("최대 74byte 까지 입력 가능합니다.");
+            $(this).val(content.substring(0, 74));
+            $('#counter').html("(0 / 74)")
+
+        }
+    });
+</script> 
+
+
+
+
+
+
+<!-- op 리턴 관련코드-->
+
+<script>
+
+    $(document).ready(function () {
+        $('.co').hide();
+        $("#op").change(function () {
+            if ($("#op").is(":checked")) {
+            
+                $('#' + $(this).data('id')).show()
+                
+
+            }         
+            else {
+                $('.co').hide();
+            }
+        });
+    });
+
+
+
+</script>
+
+
+<!-- op /수수료 박스숨김 코드-->
+
+<script>
+    $(document).ready(function () {
+        $('.minerfee_hidebox').hide();
+        $("input[name$='ckbox']").click(function () {
+            var test = $(this).val();
+
+            $("div.minerfee_hidebox").hide();
+            $("#op" + test).show();
+        });
+    });
+</script>
+
+
+
+<!-- op  1 리턴 값 표기코드-->
+
+<script>
+    $(document).ready(function(){
+    $("#op").change(function(){
+        if($("#op").is(":checked")){
+           $("#opret").show()
+        }else{
+            $("#opret").hide()
+        }
+    });
+});
+
+</script>
+
+
+<script>
+    
+function printName1() {
+
+    
+   const name = document.getElementById('name').value;
+   document.getElementById("result").innerText = name;
+        
+
+
+}
+</script>
+
+
+
+<script>
+
+function printName()  {
+    const name = document.getElementById('gma').value;
+    document.getElementById("mao").innerText = name;
+  }
+     function statusChange( statusItem ) {
+       var strText = $(statusItem).text();
+    
+      
+     $("#gma").val(strText);
+
+       const name = document.getElementById('gma').value;
+         document.getElementById("mao").innerText =  name;
+         
+    }
+    
+    </script>
+
+
+ </head>
+ <body>
+ 
+  <script>
+
+
+
+            $('.btn1').click(function () {
+        $('.hidex').hide();
+        $('.seting').fadeIn(250);
+    });
+    $('.showx').click(function () {
+        $('.seting').fadeOut(250);
+        $('.hidex').show();
+    });
+
+</script>
+
+
+
+
+<!-- 
+<script>
+
+    function CheckForm(Join){
+        var isSeasonChk = false;
+        var arr_Season = document.getElementsByName("ckbox");
+        for(var i=0;i<arr_Season.length;i++){
+            if(arr_Season[i].checked == true) {
+                isSeasonChk = true;
+    
+                $('.btn1').click(function () {
+            $('.hidex').hide();
+            $('.seting').fadeIn(250);
+        });
+        $('.showx').click(function () {
+            $('.seting').fadeOut(250);
+            $('.hidex').show();
+        });
+            
+    
+    
+    
+            }
+        }
+    
+        if(!isSeasonChk){
+            alert("수수료 종류를 한개 선택해주세요.");
+            return false;
+        }
+    
+    }
+    </script> -->
+
+    
+<!-- op  1 리턴관련코드 종료 -->
+
+    <!-- qr코드  -->
+
+
+
+
+    <script>
+
+    
+        function onScanSuccess(decodedText, ) {
+   
+        $('#qr').val(decodedText);
+        $('#qr2').val(decodedText)
+    
+            
+
+
+  
+       }
+       
+       
+       
+       
+       
+       var html5QrcodeScanner = new Html5QrcodeScanner(
+       
+       
+       
+       
+       
+           'qr-reader', { fps: 20, qrbox: 150 });
+       
+       
+           
+       html5QrcodeScanner.render(onScanSuccess);
+       document.getElementById('qr-reader__status_span').style.display="none"
+       document.getElementById('qr-reader__scan_region').style.display="none"
+       document.getElementById('qr-reader__dashboard_section_csr').style.display="none"
+       document.getElementById('qr-reader__dashboard_section_swaplink').innerText = "QR코드 스캔하로가기"
+     
+
+
+
+
+
+           </script>
+
+
+
+
+<script>
+    var video = document.createElement("video");
+    var canvasElement = document.getElementById("canvas");
+    var canvas = canvasElement.getContext("2d");
+    var loadingMessage = document.getElementById("loadingMessage");
+    var outputContainer = document.getElementById("output");
+    var outputMessage = document.getElementById("outputMessage");
+    var outputData1 = document.getElementById("qr");
+   
+
+    function drawLine(begin, end, color) {
+      canvas.beginPath();
+      canvas.moveTo(begin.x, begin.y);
+      canvas.lineTo(end.x, end.y);
+      canvas.lineWidth = 4;
+      canvas.strokeStyle = color;
+      canvas.stroke();
+    }
+
+    // Use facingMode: environment to attemt to get the front camera on phones
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream) {
+      video.srcObject = stream;
+      video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+      video.play();
+      requestAnimationFrame(tick);
+    });
+
+    function tick() {
+      loadingMessage.innerText = "⌛ Loading video..."
+      if (video.readyState === video.HAVE_ENOUGH_DATA) {
+        loadingMessage.hidden = true;
+        canvasElement.hidden = false;
+        outputContainer.hidden = false;
+
+        canvasElement.height = video.videoHeight;
+        canvasElement.width = video.videoWidth;
+        canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+        var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
+        var code = jsQR(imageData.data, imageData.width, imageData.height, {
+          inversionAttempts: "dontInvert",
+        });
+        if (code) {
+          drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
+          drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
+          drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
+          drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
+          outputMessage.hidden = true;
+          outputData.parentElement.hidden = false;
+          outputData.innerText = code.data;
+          outputData1.value = code.data;
+        } else {
+          outputMessage.hidden = false;
+          outputData.parentElement.hidden = true;
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+  </script>
+
+
+ </body>
+
+</html>

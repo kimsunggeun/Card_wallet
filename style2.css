@@ -1,0 +1,1323 @@
+input[type=radio] {display: none;}
+
+
+
+
+
+
+
+
+
+/* 메인 */
+
+
+
+
+
+
+.contentsbox{
+	width: 50%;
+	margin: 0 auto;
+}
+.contentsboxwl{
+	width: 100%;
+	margin: 0 auto;
+}
+.titlebox{
+	padding-top: 35px;
+	width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.titlep{
+	font-style: italic;
+	font-weight: bold;
+	font-size: 93px;
+}
+.count{
+	width: 76%;
+	margin: 0 auto;
+	text-align: center;
+}
+.countp{
+	font-size: 93px;
+	line-height: 200%;
+}
+.count2{
+	width: 80%;
+	margin: 0 auto;
+	line-height: 200%;
+	text-align: center;
+}
+.countp2{
+	font-size: 54px;
+}
+.btn1{
+	width: 239px;
+	text-align: center;
+	height: 81px;
+	background: #3D5531;
+	border-radius: 6px;
+	margin: 34px auto;
+	cursor: pointer;
+}
+
+
+.btn9{
+	width: 239px;
+	text-align: center;
+	height: 81px;
+	background: #3D5531;
+	border-radius: 6px;
+	margin:75px auto;
+	cursor: pointer;
+}
+
+
+.btn2{
+	width: 239px;
+	height: 81px;
+	text-align: center;
+	background: #8B1919;
+	border-radius: 6px;
+	margin: 34px auto;
+	cursor: pointer;
+}
+.btnp{
+	font-style: italic;
+	font-weight: bold;
+	padding-top: 29px;
+	font-size: 24px;
+}
+/* 메인끝 */
+/* 서브1 */
+.contentpbox{
+	text-align: center;
+	width: 62%;
+	margin: 20px auto;
+}
+.contentp{
+	font-size: 24px;
+	font-weight: bold;
+}
+.keynumber{
+	margin-top: 20px;
+	text-align: center;
+}
+.keynumber2{
+	margin-top: 20px;
+	text-align: center;
+}
+.keynumberp{
+	font-size: 12px;
+	font-weight: 200;
+	font-style: italic;
+}
+.qrcode5{
+	width: 182px;
+	height: 182px;
+	cursor: pointer;
+	margin:20px auto;
+}
+.back{
+	background-color: #525252;
+}
+#toast{
+	width: 75px;
+	height: 25px;
+	background: #B8B8B8;
+	border-radius: 6px;
+	position: absolute;
+	margin-left: 124px;
+	margin-top: -20px;
+	visibility: hidden;
+	display: inline-block;
+}
+#toast.show{
+	visibility: visible;
+	animation: fadein 0.5s, 2.5s fadeout 0.5s;
+}
+@keyframes fadein {
+	from {
+		margin-top: -20px;
+		opacity: 0;
+	}
+	to {
+		margin-top: -40px;
+		opacity: 1;
+	}
+}
+@keyframes fadeout {
+	from {
+		margin-top: -40px;
+		opacity: 1;
+	}
+	to {
+		margin-top:-20px;
+		opacity: 0;
+	}
+}
+.copyp{
+	padding-top: 4px;
+	font-weight: bold;
+	font-style: italic;
+	color: #000;
+}
+/* 서브2 */
+.inputqr{
+	margin-top: 20px;
+	width: 80%;
+	height: 23px;
+	text-align: center;
+	font-weight: 200;
+	font-style: italic;
+}
+
+.inputqr2{
+	margin-top: 20px;
+	width: 80%;
+	height: 23px;
+	text-align: center;
+	font-weight: 200;
+	font-style: italic;
+}
+.DOC_TEXT{
+	width: 620px;
+	height: 40px;
+	margin-top: 0px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 200;
+	font-style: italic;
+}
+.co{
+	width: 620px;
+	margin-bottom: 40px;
+	height: auto;
+	margin: 0 auto;
+}
+.inputnb{
+	width: 150px;
+	margin-top: 20px;
+	
+	height: 40px;
+	font-size: 27px;
+	text-align: center;
+	font-weight: bold;
+}
+.qrcode{
+	display: none;
+}
+.bitcoin{
+	margin-left: 65%;
+	cursor: pointer;
+}
+.biticoinp{
+	font-style: italic;
+	font-weight: bold;
+	font-size: 27px;
+}
+.keynumbermo{
+	display: none;
+}
+.keynumberpmo:hover{
+	font-size: 0px;
+}
+.keynumberpmo:hover::before{
+	content: 'mxByCFhDpWaiRmzW3fnaXnWGZNt4ccVeG89pXpKZHPZf';
+	font-size: 9px;
+}
+/* 신규가입페이지css */
+.inputcontent{
+	width: 960px;
+	margin: 0 auto;
+}
+.inputcontent2{
+	width: 685px;
+	margin: 0 auto;
+}
+.inputbut{
+	width: 85px;
+	height: 49px;
+	margin-bottom: 40px;
+	text-align: center;
+	background: #8B1919;
+	border-radius: 6px;
+	display: inline-block;
+	margin-left: 13px;
+	margin-right: 13px;
+	font-size: 12px;
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+	color: #fff;
+}
+/* .inputbutno{
+	width: 143px;
+	height: 49px;
+	margin-bottom: 40px;
+	text-align: center;
+	background: #8B1919;
+	border-radius: 6px;
+	display: inline-block;
+	margin-right: 0px;
+}
+*/
+.inputp{
+	font-style: italic;
+	font-weight: bold;
+	padding-top: 8px;
+	font-size: 18px;
+	line-height: 31px;
+}
+.pagenb{
+	text-align: center;
+}
+.pagenbp{
+	font-size: 24px;
+}
+/* 신규가입 페이지 css 종료 */
+/* 기존 지갑 페이지css*/
+.wallet{
+	width: 176px;
+	height: 60px;
+	background: #525252;
+	border-radius: 6px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	color: #fff;
+	font-size: 27px;
+	
+}
+.walletwar{
+	width: 616px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+.walletimg{
+	width: 50px;
+	display: inline-block;
+	padding-top: 4px;
+	padding-left: 4px;
+}
+
+.no{
+	margin-right: 0px;
+}
+/* 푸터 */
+.footerwapper{
+	width: 1100px;
+	margin: 0 auto;
+}
+.footer_pbox{
+	width: 200px;
+	margin-right: 50px;
+	margin-left: 21px;
+	margin-bottom: 200px;
+	height: auto;
+	vertical-align: top;
+	display: inline-block;
+}
+.footer_Bp{
+	font-size: 16px;
+}
+.footer_Sp{
+	margin-top: 20px;
+	font-size: 12px;
+	line-height: 16px;
+}
+.footer_hr{
+	border: 2px solid #EF4234;
+	width: 15px;
+	margin-top: 23px;
+	margin-left: 0px;
+}
+/* 푸터끝 */
+/* 해더 */
+.logo{
+	display:flex;
+}
+.logop{
+	font-size: 27px;
+}
+.header_Menu{
+	display:flex;
+	margin-top: 6px;
+	font-size: 16px;
+}
+.header_Menu_P{
+	margin-left: 66px;
+}
+/* 해더끝 */
+/* 모달 */
+.modal{
+	opacity : 0;
+	z-index: 99;
+	position: fixed;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	max-width : 100%;
+	max-height : 100%;
+	display: flex;
+	justify-content: center;
+	align-items : center;
+	transition : opacity 0.5s;
+}
+.modal.opaque{
+	opacity : 1;
+	transition : opacity 0.5s;
+}
+.modal.unstaged {
+	top:-990px;
+	height : 0;
+}
+.modal-overlay{
+	position : absolute;
+	width : 100%;
+	height : 100%;
+	background-color : RGBA(0, 0, 0, 1);
+}
+.modal-contents{
+	position: relative;
+	margin-bottom: 150px;
+	width: 100%;
+	text-align: center;
+	user-select: none;
+	border-radius: 6px;
+}
+.Warningbox{
+	width: 682px;
+	height: 333px;
+	background: #8B1919;
+	border-radius: 6px;
+	text-align: center;
+	margin: 20px auto;
+}
+.Warningp{
+	font-size: 21px;
+	line-height: 26px;
+	padding-top: 20px;
+}
+.close{
+	width: 164px;
+	margin-right: 20px;
+	margin-top: 20px;
+	display: inline-block;
+	height: 64px;
+	background: #262626;
+}
+.closep{
+	color: #8F111A;
+	font-weight: bold;
+	font-size: 20px;
+	font-style: normal;
+	line-height: 26px;
+	padding-top: 6px;
+}
+.close2{
+	width: 164px;
+	margin-top: 20px;
+	display: inline-block;
+	vertical-align: top;
+	height: 64px;
+	background: #262626;
+}
+.closep2{
+	color: #222;
+	font-weight: bold;
+	font-size: 20px;
+	font-style: normal;
+	line-height: 26px;
+	padding-top:18px;
+}
+/* ddd */
+.modal_wrap{
+	display: none;
+	position: fixed;
+	content: "";
+	width: 100%;
+	height: 100vh;
+	background-color:rgba(0, 0,0,0.9);
+	top:0;
+	left: 0;
+	text-align: center;
+	z-index: 999;
+	justify-content: center;
+	align-items : center;
+	animation: six 0.5s;
+}
+.modal_close{
+	width: 239px;
+	text-align: center;
+	height: 81px;
+	background: #525252;
+	border-radius: 6px;
+	margin: 34px auto;
+	cursor: pointer;
+}
+.modal_close> a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	animation: six 0.5s;
+}
+.minerfee{
+	width: 100%;
+	margin: 40px auto;
+	border: none;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+}
+.minerfee option{
+	color: #2d2d2d;
+}
+/* */
+/* 애니메이션 */
+.invisible{
+	opacity: 0;
+	transition: 0.5s ease;
+	transform: translateY(00%);
+}
+.visible{
+	opacity: 1;
+	animation: six 1.5s;
+	transform: translateY(3%);
+}
+@keyframes six {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.backgroundimg{
+	position: absolute;
+	overflow: hidden;
+	margin-left: 65%;
+	animation: six 1s;
+}
+.backgroundimg img{
+	overflow: hidden;
+	position: relative;
+}
+/* 추가css */
+.money{
+	width: 280px;
+	text-align: center;
+	margin: 8px auto;
+}
+.moneyp{
+	font-size: 15px;
+	cursor: pointer;
+	color: #A3A3A3;
+}
+.stting{
+	width:100px;
+	margin: 10px auto;
+	text-align: center;
+	border-bottom: 1px #A3A3A3 solid;
+}
+.minerfeeop{
+	margin-left: 15px;
+	display: inline-block;
+	margin-right: 15px;
+}
+.minerfee_hideboxbp{
+	font-size: 18px;
+	line-height: 200%;
+	color: #EF4234;
+}
+.minerfee_hideboxp{
+	font-size: 15px;
+	line-height: 200%;
+	color: #fff;
+}
+.seting{
+	width: 239px;
+	margin: 0 auto;
+	margin-top: 322px ;
+	display: none;
+}
+.setingimgbox{
+	width: 152px;
+	height: 209px;
+	margin: 0 auto;
+}
+.setingpbox{
+	text-align: center;
+	margin-bottom: 110px;
+}
+.setingp{
+	font-size: 30px;
+	font-weight: bold;
+}
+.setingp2{
+	font-size: 24px;
+	font-weight: bold;
+}
+.modal_close2{
+	width: 239px;
+	text-align: center;
+	height: 81px;
+	background: #525252;
+	border-radius: 6px;
+	margin: 34px auto;
+	cursor: pointer;
+}
+.modal_close2> a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	animation: six 0.5s;
+}
+.ooo{
+	padding-top: 94px;
+}
+.paycon{
+	width:300px;
+	margin:0 auto;
+}
+.payimgbox{
+	width: 152px;
+	margin: 0 auto;
+}
+.paypbox{
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.payp{
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 150%;
+}
+.payconetntsbox{
+	width: 503px;
+	margin: 0 auto;
+	margin-top: 0px;
+}
+.payconentntsleftbox{
+	width: 80px;
+	text-align: left;
+	display: inline-block;
+}
+.payconetntsp{
+	font-size: 10px;
+	line-height: 300%;
+}
+.payconentntsrightbox{
+	width: 419px;
+	text-align: right;
+	display: inline-block;
+}
+.pay{
+	width: 532px;
+	height: 81px;
+}
+.counter{
+	position: absolute;
+	color: #9A9A9A;
+	margin-top: 8px;
+	
+	font-family: Ubuntu;
+	font-style: italic;
+	font-size: 22px;
+}
+.paymo{
+	display: none;
+}
+.red{
+	color: #fff !important;
+}
+.won{
+	width: 10px;
+	height: 10px;
+	border-radius: 30px;
+	background-color: #3D5531;
+	display: none;
+	position: absolute;
+	margin-top: -18px;
+	margin-left: 105px;
+}
+.income{
+	margin-top: 40px;
+	display: none;
+}
+.Pm{
+	display: none;
+}
+/* Dropdown Button */
+.dropbtn {
+	background-color: #fff;
+	color: #222;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+.clicked{
+	background-color: #EF4234;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+	background-color: #EF4234;
+	color: #fff;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	display: none;
+	position: relative;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #2d2d2d;
+	z-index: 999;
+	width: 100%;
+	height: 100vh;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: #fff;
+	
+	text-align: center;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: #EF4234
+}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+	display:block;
+}
+.address{
+	text-align: center;
+	margin-left: 20px;
+	margin-bottom: 0px;
+}
+.key1{
+	text-align: center;
+	margin-bottom: 0px;
+}
+.key2{
+	text-align: center;
+	margin-bottom: 0px;
+}
+.nimonick{
+	text-align: center;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.transaction{
+	margin: 0 auto;
+	width: 100%;
+	margin-top: -35px;
+	margin-bottom: 60px;
+	padding-bottom: 40px;
+}
+
+.Pa{
+	margin-left: 5px;
+}
+.oo{
+	padding-top: 199px;
+}
+.bod{
+	margin-top: 40px;
+}
+.minerfeeop label{
+	color: #A3A3A3;
+}
+.rqwe{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.active{background-color: #444;}
+.panel{
+    padding: 0 18px;
+    background-color: wheat;
+    max-height: 0;
+    overflow: hidden;
+    transform: max-height 0.2s ease-out;
+}
+.hash{font-size: 12px;display: inline-block;
+		  font-weight: bold;
+		  vertical-align: super;
+
+			}
+.date{font-size: 24px;display: inline-block;
+		   font-weight: bold;
+		   margin-top: 20px;
+}
+.price{font-size: 54px;
+	margin-left: 20px;
+	display: inline-block;
+			font-weight: bold;}
+.bo{font-size: 24px;display: inline-block;
+	   font-weight: bold;
+	   margin-top: 20px;
+	color: #EF4234;
+	float: right;
+	clear: both;}
+	
+.menu2{display: none;
+	  
+	   margin-bottom: 40px;
+	   line-height: 215%;
+	}
+.transaction_box{width: 675px; margin: 80px auto; cursor: pointer; line-height: 300%;  }
+.menu1cle{opacity: 0.5;}
+.bo2{font-size: 16px; font-weight: bold; display: inline-block;}
+.bo3{font-size: 12px; float: right;}
+.bohr{border: 1px solid #616161;}
+.next{width: 112px;
+	  margin:0 auto}
+.next_p{display: inline-block;
+		font-size: 18px;
+		text-align: center;
+		padding-left: 20px;}
+
+.nfocus{color: #EF4234; font-weight: bold;}
+
+
+.confirm{color: #B08B2E; font-size: 24px;}
+.confirm2{ font-size: 18px; color: #A3a3a3; font-weight: bold;}
+.logout{font-size: 12px; color: #A3A3A3;}
+.qrlabel{border: none; background: none; display: inline-block; cursor: pointer; position: absolute;
+	margin-top: 23px;
+	margin-left: -27px;}
+
+.qr-reader{width: 50%;}
+.do {width: 100px !important; display: inline-block !important;}
+.doo {width: 233px !important; display: inline-block !important;}
+
+.xllx{padding-bottom: 40px; padding-top: 0px;}
+
+.loadinput{width: 60%;      height: 30px;margin:20px auto; display: flex; text-align: center; background-color: #fff; color: #2d2d2d; font-size: 12px; border-radius: 6px;}
+.confirm5{margin-top: 20px; margin-bottom: 20px; font-size: 15px; line-height: 160%; text-align: center;}
+.Pu{position: absolute;
+    margin-left: 459px;
+
+    margin-top: 26px;
+}
+.inputqr27{margin-top: 20px;
+			text-align: center;}
+
+.soxxxx{display: none;}
+
+/* 추가종료 */
+
+
+
+/* qr코드 */
+
+.loadingMessage{display: none;}
+
+
+
+#loadingMessage {
+  text-align: center;
+  padding: 40px;
+  background-color: #eee;
+}
+
+#canvas {
+  width: 100%;
+}
+
+#output {
+  margin-top: 20px;
+  
+  padding: 10px;
+ 
+}
+
+#output div {
+  height: 40px;
+  word-wrap: break-word;
+}
+
+#noQRFound {
+  text-align: center;
+}
+
+
+/* qr코드종료 */
+/* 반응형 */
+@media all and (max-width:1024px){
+	
+	.loadingMessage{display: none;}
+
+	.header_Menu{
+		display: none;
+	}
+	.dropdown{
+		display: inline-block;
+	}
+	.mob{
+		background-image: url(./img/Layer\ 2\ 1.png);
+		background-repeat: no-repeat;
+		background-position: right;
+		background-position-y: top;
+	
+	}
+	.contentsbox{
+		width: 100%;
+	}
+	.backgroundimg{
+		display: none;
+	}
+	.titlebox{
+		padding-top: 0px;
+	}
+	.titlep{
+		font-size: 4.5em;
+	}
+	.countp{
+		font-size: 3.5em;
+	}
+	.countp img{
+		width: 21px;
+	}
+	.countp2{
+		font-size: 1.5em;
+	}
+	.inputqr{
+		width: 332px;
+	}
+	.keynumberp{
+		font-size: 0.1em;
+	}
+	.Warningbox{
+		width: 405px;
+	}
+
+
+	label img{
+		margin-left: 35px;
+	}
+	.count{
+		width: 79%;
+	}
+}
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px){
+	.soxxxxx{display: none;}
+
+	.soxxxx{display: block;}
+	
+.loadingMessage{width: 80%; display: block;     margin: 0 auto; color: #222; font-size: 12px;}
+	.transaction_box{width: 90%;}
+	.date{font-size: 18px;}
+	.price{font-size: 30px;}
+	.hash{font-size: 12px; display: block;}
+	.bo3{font-size: 11px;}
+	.qr-reader{width: 80%; display: none;}
+	.count{
+		width: 79%;
+	}
+	.sub{
+		font-size: 12px;
+	}
+	.in_price{
+		font-size: 40px;
+		padding-top: 44px;
+	}
+	.out_price{
+		font-size: 40px;
+		padding-top: 44px;
+	}
+	.in_hash {
+		font-size: 10px;
+		padding-left: 20px;
+		padding-top: 20px;
+	}
+	.out_hash {
+		font-size: 10px;
+		padding-left: 20px;
+		padding-top: 20px;
+	}
+	.inputp{
+		font-size: 12px;
+	}
+
+	.transaction_boxin{
+		width: 90%;
+	}
+	.transaction_boxout{
+		width: 90%;
+	}
+
+	.inputbut{
+		width: 52px;
+		margin-left: 3px;
+		margin-right: 0px;
+		margin-bottom: 10px;
+		margin-right: 3px;
+	}
+	.walletbox{
+		width:250px;
+		margin: 0 auto;
+	}
+	.Pu{    margin-left: 347px;}
+	.key1{margin-right: 0px;}
+	.contentsbox{
+		width: 100%;
+	}
+	.biticoinp{
+		font-size: 19px;
+	}
+	.inputcontent{
+		width: 320px;
+	}
+
+	.inputcontent2{
+		width: 228px;
+	}
+	.walletwar{
+		width: 80%;
+		margin-top: 40px;
+		margin-bottom: 0px;
+	}
+	.wallet{
+		width: 113px;
+		font-size: 16px;
+
+		margin-bottom: 30px;
+	}
+	.DOC_TEXT{
+		width: 70%;
+		height: 38px;
+		margin-bottom: 0px;
+	}
+	.co{
+		width: 70%;
+	}
+	.footer_pbox{
+		width: 143px;
+	}
+	.oo{
+		padding-top: 30px;
+	}
+	.money{
+		width: 100%;
+	}
+	.Px{
+		display: none;
+	}
+	.Pm{
+		display: block;
+	}
+	label img{
+		margin-left: 35px;
+	}
+	.bod{
+		margin-top: 0px;
+	}
+	.setingpbox{
+		margin-bottom: 56px;
+	}
+
+	.counter{
+		font-size: 9px;
+		margin-top: 16px;
+		margin-left: 0px;
+	}
+	.address{
+		margin-left: 0px;
+	}
+	.transaction{margin-top: 30px;}
+
+	.remove{display: none;}
+
+	.nob{font-size: 30px; text-align: center;}
+	.inputqr27{display: none;}
+	
+}
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:480px) {
+	.Pu{
+		margin-left: 271px;
+	
+
+	}
+	.soxxxxx{display: none;}
+	.soxxxx{display: block;}
+
+
+	.loadingMessage{width: 70%; display: block;     margin: 0 auto; color: #222; font-size: 12px;}
+	.inputqr27{display: none;}
+	.confirm5{margin-top: 5px; }
+	.close{margin-right: 23px !important;}
+
+	.loadinput{width: 100%; }
+	.inputqr2{width: 90%;}
+	
+	.mob{height: 95vh;}
+	
+	.income{margin-top: 0px;}
+
+	.xllx{padding-bottom: 10px; padding-top: 0px;}
+
+	.contentpbox{
+	
+		margin: 20px auto;
+		margin-bottom: 0px;
+	}
+	.qr-reader{width: 80%; display: none;}
+	.Pa{margin-left: 2px;}
+	.confirm2{font-size: 12px;}
+	.confirm{font-size: 16px; font-weight: bold;}
+	.remove{display: none;}
+
+	.none{display: none;}
+	.transaction{margin-top: 30px; padding-bottom: 30px;}
+	.wallet{
+		width: 113px;
+		margin-bottom: 30px;
+		font-size: 16px;
+		height: 40px;
+	}
+	.address{
+		margin-left: 0px;
+	}
+	.transaction_box{width: 90%; margin: 10px auto;}
+	.date{font-size: 12px;}
+	.price{font-size:18px;}
+	.hash{font-size: 10px; display: block; white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;}
+	.bo3{font-size: 10px; white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;}
+	.count{
+		width: 79%;
+	}
+	.money{
+		width: 100%;
+		margin-top: 10px;
+	}
+	.sub{
+		font-size: 12px;
+	}
+	.inputp{
+		font-size: 12px;
+	}
+	.transaction_boxin{
+		width: 90%;
+	}
+	.transaction_boxout{
+		width: 90%;
+	}
+
+	.out_price{
+		font-size: 24px;
+		padding-top: 44px;
+	}
+	.in_price{
+		font-size: 24px;
+		padding-top: 44px;
+	}
+	.in_hash {
+		font-size:10px;
+		padding-left: 4px;
+	}
+	
+	.walletbox{
+		width: 250px;
+		margin: 0 auto;
+	}
+	#toast{
+		margin-left: 66px;
+	}
+	.payconetntsp{
+		font-size: 10px;
+	}
+	.payconentntsleftbox{
+		display: block;
+		width: 100%;
+	}
+	.payconentntsrightbox{
+		display: block;
+		width: 100%;
+	}
+	.paymo{
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.inputcontent3{
+		width: 87%;
+		margin: 0 auto;
+	}
+
+
+	.keynumber2{
+		display: none;
+	}
+	.keynumbermo{
+		display: none;
+	}
+	.contentsbox{
+		width: 100%;
+	}
+	.biticoinp{
+		font-size: 15px;
+	}
+	.Warningbox{
+		width: 335px;
+		margin: -35px auto;
+	}
+	.titlep{
+		font-size: 2.4em;
+	}
+	.countp{
+		font-size: 2.5em;
+	}
+	.close2{
+		width: 121px;
+	}
+	.inputqr{
+		width: 100%;
+	}
+	.close{
+		width: 121px;
+		margin-right: 10px;
+	}
+	.inputcontent2{
+		width: 305px;
+	}
+	.inputcontent{
+		width: 100%;
+	}
+	.inputbut{
+		width: 70px;
+		margin-left: 3px;
+		margin-right: 0px;
+		margin-bottom: 10px;
+	}
+	.nimonick {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	.key1{
+		margin-left:0px;
+		margin-right: 0px;
+	}
+	.walletwar{
+		width: 80%;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	.DOC_TEXT{
+		width: 70%;
+		height: 38px;
+		margin-bottom: 0px;
+	}
+	.co{
+		width: 90%;
+		margin-bottom: 40px;
+	}
+	.oo{
+		padding-top: 60px;
+	}
+	.btn1{
+		margin: 20px auto;
+	}
+
+	.btn9{
+		margin: 20px auto;
+	}
+	.modal_close{
+		margin: 20px auto;
+		margin-bottom: 90px;
+	}
+	.minerfee{
+		width: 100%;
+		margin: 40px auto;
+		border: none;
+		font-weight: bold;
+		color: #fff;
+		font-size: 24px;
+	}
+	.bod{
+		margin-top:0px;
+	}
+	.setingpbox{
+		margin-bottom: 56px;
+	}
+	.minerfeeop{
+		margin-left: 0px;
+		margin-bottom: 20px;
+		display: block;
+		margin-right: 0px;
+	}
+
+	input[type=radio]{
+		display: none;
+	}
+	.counter{
+		font-size: 9px;
+		margin-top: 16px;
+		margin-left: 0px;
+	}
+
+	.paypbox{
+		margin-top: 20px;
+	}
+	.payimgbox{
+		width: 100px;
+	}
+	.payimgbox img{
+		width: 100px;
+	}
+	.payp{
+		font-size: 20px;
+	}
+	.payconetntsbox{
+		display: none;
+	}
+	.seting{
+		margin-top: 109px;
+	}
+	.pay{
+		width: 90%;
+	}
+	
+	.btn2{margin:15px auto;}
+}
+
+
+
+@media all and (min-width:481px) and (max-width:535px){
+
+.er1{
+	margin-top: -20px;
+    margin-left: 111px;}
+.er2{ margin-left: 35px;}
+
+
+
+
+}
+
+/* 반응형종료 */
+
+
+

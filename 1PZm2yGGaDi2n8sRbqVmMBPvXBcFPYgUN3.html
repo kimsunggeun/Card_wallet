@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/img/favicon.ico">
+
+
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="common2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/0.3.6/ScrollTrigger.min.js"></script>
+    <script src="./scrollTrigger.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>카드지갑메인</title>
+</head>
+
+<body>
+   
+
+
+
+    <section class="mob">
+        <header>
+
+            <div class="logo">
+                <a href="1PZm2yGGaDi2n8sRbqVmMBPvXBcFPYgUN3.html">
+                    <p class="logop"><span style="font-style: italic; font-weight: bold;">@blockchain</span> card</p>
+                </a>
+
+             
+            </div>
+            
+            <div class="logoutbox">
+                <a href="Card_wallet_Intro.html">
+                    <p class="logout">로그아웃</p>
+                </a>
+            </div>
+              
+            </div>
+        
+        </header>
+
+        <div class="contentsbox  visible">
+
+            <div class="titlebox">
+                <p class="titlep">blockchain <span style="font-weight: 200; font-style: normal;">card</span></p>
+            </div>
+
+            <div class="count" style="margin-top: 40px; ">
+                <p  id="doxxx"class="id" style="color: #a3a3a3;">
+                     </p>
+            </div>
+
+            <div class="count">
+                <input id="doxx" class="countp"   value="" 
+                style="border: none; background: none; text-align: center; font-weight: bold; color: #fff; width: 100%; margin-bottom: 20px; pointer-events: none;">
+            </div>
+
+            <div class="count2">
+                <p class="countp2" id="btc2"><span style="font-size: 0.5em;"></p>
+            </div>
+            <a href="Card_wallet_receive.html">
+                <div class="btn1">
+                    <p class="btnp">blockchain <span style="font-style: normal; ">수신하기</span></p>
+                </div>
+            </a>
+            <a href="Card_wallet_transfer.html">
+                <div class="btn2">
+                    <p class="btnp">blockchain <span style="font-style: normal; ">이체하기</span></p>
+                </div>
+            </a>
+            <a href="Card_wallettransactionhistory.html">
+            <div class="stting">
+                <p class="moneyp" style="padding-bottom:5px;">거래내역조회</p>
+                <div class="won">
+            
+                </div>
+            </a>
+        </div>
+       
+
+    </section>
+
+
+
+
+    <script>
+        $('#toggle').click(function () {
+            $('#toggle .bar').toggleClass('animate');
+            $('#page').toggleClass('overlay');
+        });
+    </script>
+
+
+</body>
+
+
+
+
+<!--Address 값 받아오는코드  -->
+<script>
+    function get_pric3e() {
+      var el = document.getElementById('doxxx')
+      fetch("http://btctest.iptime.org:8080/Wallet_search")
+
+        .then(res => res.json())
+        .then(res => {
+          console.log(res);
+          var pri3ce = res.Address
+          el.innerHTML = "Your Address : "+ pri3ce
+        }).catch(err => {
+          el.innerHTML = "$0.00 - Error";
+        });
+    }
+
+    get_pric3e()
+
+
+  </script>
+
+
+<!--Final_Balance 값 받아오는코드  -->
+<script>
+  function get_pric4e() {
+   
+    fetch("http://10.159.29.84:8080/Wallet_search")
+
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        var pri2ce = res.Final_Balance
+       
+        $('#doxx').val(pri2ce);
+
+      }).catch(err => {
+        el.innerHTML = "$0.00 - Error";
+      });
+  }
+
+  get_pric4e()
+
+  // setInterval(get_pric2e, 10000)
+</script>
+
+
+
+
+
+
+
+<!--비트코인시세 값 받아오는코드  -->
+<script>
+    
+  function get_price() {
+    const name = document.getElementById('doxx').value;
+    var el = document.getElementById('btc2')
+    
+    fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        var price = res.bitcoin.usd
+        var fif =  price * name
+        el.innerHTML =  "≈" +fif
+      }).catch(err => {
+        el.innerHTML = "$0.00 - Error";
+      });
+  }
+
+  
+
+  get_price()
+
+
+  setInterval(get_price, 2500)
+
+</script>
+
+
+
+</html>
